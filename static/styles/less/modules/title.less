@@ -1,21 +1,75 @@
 
 .title {
-  letter-spacing: 5px;
+  letter-spacing: 3px;
   text-transform: uppercase;
+}
+
+.section-title, .list-title, .slug-title {
+  font-family: @MontserratSBold;
 }
 
 .section-title {
   font-size: 18px;
-  font-family: @MontserratSBold;
   color: #222222;
+  margin-bottom: 60px;
+}
+
+.after-line {
+  position: relative;
+  margin-bottom: 100px;
+
+  &:before {
+    content: '';
+    width: 95px;
+    height: 1px;
+    background-color: #f5f5f5;
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
 }
 
 .title-white {
-  color: #fff;
+  color: #fff !important;
+}
+
+.grid-title, .caption-title, .list-date {
+  font-family: @MontserratBold;
 }
 
 .grid-title {
-  font-family: @MontserratBold;
   font-size: 20px;
   color: #004a64;
+}
+
+.caption-title {
+  color: #fff;
+  font-size: 28px;
+}
+
+.list-date {
+  color: #a7a5a5;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.list-title {
+  font-size: 24px;
+  margin-bottom: 35px;
+}
+
+.slug-title {
+  font-size: 42px;
+  color: #fff;
+}
+
+.secondary-title {
+  font-family: @MontserratBold;
+  font-size: 38px;
+  color: #222222;
+  margin: 0 0 1.8em;
+  text-transform: none;
+  letter-spacing: normal;
 }

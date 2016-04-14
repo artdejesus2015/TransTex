@@ -7,7 +7,7 @@
   left: 0;
   right: 0;
   top: 0;
-  z-index: 1;
+  z-index: 2;
   background-color: #fff;
 
 
@@ -39,6 +39,12 @@
           color: #c42841;
         }
       }
+
+      &.current-menu-item, &.current_page_item {
+        a {
+          color: #c42841;
+        }
+      }
     }
   }
 
@@ -50,5 +56,9 @@
 
   .navbar-menu-collapse {
     text-align: right;
+  }
+
+  &.navbar-animated {
+    .box-shadow(0 0 10px #eee);
   }
 }
