@@ -1,0 +1,21 @@
+.banner {
+  position: relative;
+  background-color: #000;
+  background-position: center center;
+  background-size: cover;
+
+  &:before {
+    content: '';
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    .opacity(.5);
+  }
+}
+
+.banner-home {
+  height: 800px;
+}

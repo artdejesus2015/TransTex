@@ -1,0 +1,20 @@
+.section-we-do {
+  background-color: #004a64;
+  position: relative;
+
+  &:before {
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #004a64;
+    .opacity(0.8);
+    position: absolute;
+  }
+  
+  .content {
+    position: relative;
+    z-index: 1;
+  }
+}
