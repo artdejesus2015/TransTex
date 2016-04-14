@@ -6778,6 +6778,19 @@ ul {
 .description {
   margin-bottom: 50px;
 }
+.bg {
+  background-position: center center;
+  background-size: cover;
+}
+.bg-r {
+  position: relative;
+  background-position: center center;
+  background-size: cover;
+}
+.container-fluid {
+  margin: 0 auto;
+  max-width: 2150px;
+}
 .btn-transparent {
   background-color: transparent;
 }
@@ -6835,15 +6848,22 @@ ul {
 .search-form-wrap .navbar-search-form .btn-transparent {
   padding: 0;
 }
+.title {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
 .section-title {
   font-size: 18px;
   font-family: 'MontserratSemiBold', sanserif;
   color: #222222;
-  text-transform: uppercase;
-  letter-spacing: 5px;
 }
 .title-white {
   color: #fff;
+}
+.grid-title {
+  font-family: 'MontserratBold', sanserif;
+  font-size: 20px;
+  color: #004a64;
 }
 .navbar-menu {
   margin: 0;
@@ -6877,6 +6897,11 @@ ul {
   font-size: 14px;
   color: #333333;
   padding: 35px 15px;
+  text-transform: uppercase;
+}
+.navbar-menu .navbar-nav li a:hover,
+.navbar-menu .navbar-nav li a:focus {
+  color: #c42841;
 }
 .navbar-menu .menu-main-menu-container {
   float: none;
@@ -6887,10 +6912,7 @@ ul {
   text-align: right;
 }
 .banner {
-  position: relative;
   background-color: #000;
-  background-position: center center;
-  background-size: cover;
 }
 .banner:before {
   content: '';
@@ -6947,6 +6969,14 @@ ul {
 }
 .grid .col-md-4 {
   padding: 0 40px;
+}
+.grid .grid-title {
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 25px;
 }
 @media (min-width: 1743px) {
   .navbar-menu .menu-main-menu-container {
