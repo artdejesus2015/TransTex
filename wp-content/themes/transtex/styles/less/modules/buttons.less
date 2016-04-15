@@ -1,0 +1,30 @@
+.btn {
+  letter-spacing: 3px;
+}
+
+.btn-transparent {
+  background-color: transparent;
+}
+
+.btn-primary {
+  background-color: #971b2f;
+  padding: 20px 30px;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: @MontserratBold;
+  border: 2px solid transparent;
+  border-radius: 0;
+  .transition(all ease-in-out .3s);
+
+  &:hover, &:focus {
+    background-color: transparent;
+    border-color: #971b2f;
+    color: #971b2f;
+  }
+}
+
+.btn-bordered-white {
+  border-color: #fff;
+  background-color: transparent;
+}

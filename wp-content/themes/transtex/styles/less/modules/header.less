@@ -1,0 +1,64 @@
+.navbar-menu {
+  margin: 0;
+  border: none;
+  height: auto;
+  border-radius: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  background-color: #fff;
+
+
+  .navbar-brand {
+    height: auto;
+    overflow: hidden;
+    width: 310px;
+    height: auto;
+  }
+
+  .navbar-nav {
+    float: none;
+    text-align: center;
+    display: inline-block;
+
+    li {
+      float: none;
+      display: inline-block;
+      text-align: center;
+
+      a {
+        font-family: @MontserratSBold;
+        font-size: 14px;
+        color: #333333;
+        padding: 35px 15px;
+        text-transform: uppercase;
+
+        &:hover, &:focus {
+          color: #c42841;
+        }
+      }
+
+      &.current-menu-item, &.current_page_item {
+        a {
+          color: #c42841;
+        }
+      }
+    }
+  }
+
+  .menu-main-menu-container {
+    float: none;
+    text-align: center;
+    display: inline-block;
+  }
+
+  .navbar-menu-collapse {
+    text-align: right;
+  }
+
+  &.navbar-animated {
+    .box-shadow(0 0 10px #eee);
+  }
+}
