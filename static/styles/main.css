@@ -6865,6 +6865,11 @@ h6 {
 .red {
   color: #971b2f;
 }
+.helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
 .btn {
   letter-spacing: 3px;
 }
@@ -6973,7 +6978,9 @@ h6 {
 }
 .grid-title,
 .caption-title,
-.list-date {
+.list-date,
+.secondary-title,
+.secondary-grid-title {
   font-family: 'MontserratBold', sanserif;
 }
 .grid-title {
@@ -6998,12 +7005,16 @@ h6 {
   color: #fff;
 }
 .secondary-title {
-  font-family: 'MontserratBold', sanserif;
   font-size: 38px;
   color: #222222;
   margin: 0 0 1.5em;
   text-transform: none;
   letter-spacing: normal;
+}
+.secondary-grid-title {
+  font-size: 38px;
+  color: #222222;
+  margin: 0 0 20px;
 }
 .navbar-menu {
   margin: 0;
@@ -7120,7 +7131,8 @@ h6 {
 }
 .banner-sub {
   height: 450px;
-  background-position: top center;
+  background-position: center center;
+  background-attachment: fixed;
 }
 .banner-sub .banner-caption {
   position: absolute;
@@ -7387,6 +7399,55 @@ h6 {
   font-family: 'MontserratSemiBold', sanserif;
   font-size: 22px;
   color: #961b2e;
+}
+.grid-equipment {
+  display: block;
+}
+.grid-equipment .grid-desription {
+  text-align: left;
+  padding: 40px 30px 60px;
+}
+.grid-equipment .grid-img:after,
+.grid-equipment .grid-item:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.grid-equipment .grid-img {
+  padding: 0;
+  overflow: hidden;
+}
+.grid-equipment .grid-item {
+  margin-bottom: 60px;
+  -webkit-box-shadow: 0 0 20px 2px #E8E8E8;
+  box-shadow: 0 0 20px 2px #E8E8E8;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.grid-services .grid-item {
+  -webkit-box-shadow: 0 0 20px 2px #E8E8E8;
+  box-shadow: 0 0 20px 2px #E8E8E8;
+  padding: 40px 50px 60px;
+  max-width: 1100px;
+  margin: 0 auto 60px;
+}
+.grid-services .description {
+  max-width: none;
+  width: auto;
+}
+.grid-services .services-icon {
+  vertical-align: text-bottom;
+  padding-right: 20px;
+}
+.grid-services .secondary-grid-title {
+  margin-bottom: 30px;
 }
 .video-wrap {
   width: 1040px;
