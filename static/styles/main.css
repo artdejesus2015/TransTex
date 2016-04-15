@@ -7446,6 +7446,9 @@ h6 {
   vertical-align: text-bottom;
   padding-right: 20px;
 }
+.grid-services .secondary-grid-title {
+  margin-bottom: 30px;
+}
 .video-wrap {
   width: 1040px;
   height: 510px;

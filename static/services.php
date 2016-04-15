@@ -44,7 +44,7 @@
                         <p>In a consulting capacity, our engineers will visit a site to perform comprehensive tests and evaluations on both the plant and the process. We won’t just pinpoint problems; we’ll provide improvement options that are guaranteed to have your plants and employees functioning as efficiently as possible. Clients then have the choice to either make the changes themselves or contract with TransTex to perform the work.</p>
                     </div>
 
-                    <a href="#" class="btn btn-primary">view our amine plantse</a>
+                    <a href="#" class="btn btn-primary">view our equipment</a>
                 </div>
 
             </div>
