@@ -1,0 +1,286 @@
+.grid {
+  a {
+    display: block;
+  }
+}
+
+.grid-box {
+  padding: 0 40px;
+
+  a {
+    display: block;
+
+    &:hover {
+      .grid-item {
+        &:before {
+          .opacity(0.7);
+        }
+      }
+
+      .grid-caption {
+        .opacity(1);
+      }
+
+      .grid-title {
+        bottom: -80px;
+      }
+    }
+  }
+
+  .grid-item {
+    background-color: #171a24;
+    position: relative;
+    height: 430px;
+    width: 100%;
+    overflow: hidden;
+    .transition(all ease-in-out .3s);
+
+    &:before {
+      background-color: #171a24;
+      .opacity(0.3);
+      .transition(all ease-in-out .3s);
+    }
+
+    &:after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+  }
+
+  .grid-caption {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: left;
+    padding: 40px 55px;
+    .opacity(0);
+    .transition(all ease-in-out .3s);
+
+    .caption-title {
+      margin-bottom: 40px;
+      position: relative;
+      display: inline-block;
+
+      &:before, &:after {
+        content: '';
+        width: 610px;
+        height: 1px;
+        background-color: #af2037;
+        position: absolute;
+        top: 20px;
+      }
+
+      &:before {
+        left: -640px;
+      }
+
+      &:after {
+        right: -640px;
+      }
+    }
+
+    .description {
+      p {
+        color: #fff;
+      }
+    }
+
+    .btn-primary {
+      &:hover, &:focus {
+        background-color: #004a64;
+        border-color: #004a64;
+        color: #fff;
+      }
+    }
+  }
+  
+  .col-md-4 {
+    padding: 0 40px;
+  }
+
+  .grid-title {
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 25px;
+    .transition(all ease-in-out .3s);
+  }
+  
+}
+
+.list {
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: block;
+  }
+}
+
+.list-inline {
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+.list-news {
+  li {
+    display: inline-block;
+    width: 33%;
+    vertical-align: top;
+  }
+
+  .description {
+    p {
+      font-size: 16px;
+      font-family: @Roboto;
+      color: #555555;
+    }
+  }
+
+  .list-item {
+    padding: 0 50px;
+  }
+}
+
+
+.team-list {
+  text-align: center;
+
+  li {
+    width: 360px;
+    padding: 0 20px;
+    margin-bottom: 1em;
+
+    a {
+      display: block;
+    }
+  }
+
+  .list-item {
+    width: 100%;
+  }
+  .list-img {
+    height: 400px;
+    width: 100%;
+    background-color: #971b2f;
+    border: 15px solid #fff;
+  }
+
+  .list-description {
+    text-align: left;
+  }
+
+  .list-name {
+    font-family: @MontserratSBold;
+    color: #222222;
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+
+  .list-position {
+    color: #333333;
+  }
+}
+
+.values-list {
+  text-align: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+
+  -webkit-justify-content: center;
+  justify-content: center;
+
+  li {
+    width: 450px;
+    border: 1px solid #ececec;
+    padding: 20px 40px;
+    margin: 20px;
+  }
+
+  .list-title {
+    font-family: @MontserratSBold;
+    font-size: 22px;
+    color: #961b2e;
+  }
+}
+
+.grid-equipment {
+  display: block;
+
+  .grid-desription {
+    text-align: left;
+    padding: 40px 30px 60px;
+  }
+
+  .grid-img, .grid-item {
+    &:after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+  }
+
+  .grid-img {
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .grid-item {
+    margin-bottom: 60px;
+    .box-shadow(0 0 20px 2px #E8E8E8);
+
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-justify-content: center;
+    justify-content: center;
+
+
+  }
+
+}
+
+.grid-services {
+  .grid-item {
+    .box-shadow(0 0 20px 2px #E8E8E8);
+    padding: 40px 50px 60px;
+    max-width: 1100px;
+    margin: 0 auto 60px;
+  }
+
+  .description {
+    max-width: none;
+    width: auto;
+  }
+
+  .services-icon {
+    vertical-align: text-bottom;
+    padding-right: 20px;
+  }
+
+  .secondary-grid-title {
+    margin-bottom: 30px;
+  }
+}
