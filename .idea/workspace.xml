@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3dcff271-fc96-426b-9842-5702e5451619" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/about.html" afterPath="$PROJECT_DIR$/static/about.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/styles/main.css" afterPath="$PROJECT_DIR$/static/styles/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/styles/less/modules/title.less" afterPath="$PROJECT_DIR$/static/styles/less/modules/title.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TransTex.iws" />
@@ -52,7 +49,7 @@
           <file leaf-file-name="about.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/static/about.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.70569366">
+                <state vertical-scroll-proportion="1.0744811">
                   <caret line="44" column="71" selection-start-line="44" selection-start-column="71" selection-end-line="44" selection-end-column="71" />
                   <folding>
                     <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -76,7 +73,7 @@
               <file leaf-file-name="title.less" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/static/styles/less/modules/title.less">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.72602737">
+                    <state vertical-scroll-proportion="1.1577669">
                       <caret line="71" column="17" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
                       <folding />
                     </state>
@@ -210,7 +207,7 @@
               <file leaf-file-name="fonts.less" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/static/styles/less/modules/fonts.less">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.45147678">
+                    <state vertical-scroll-proportion="0.7353952">
                       <caret line="64" column="21" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
                       <folding />
                     </state>
@@ -432,8 +429,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="100" y="23" width="2446" height="1391" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32974634" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -443,7 +441,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.114392675" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3289777" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -475,6 +473,14 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
     </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -650,7 +656,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/styles/less/modules/fonts.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45147678">
+        <state vertical-scroll-proportion="0.7353952">
           <caret line="64" column="21" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
           <folding />
         </state>
@@ -674,7 +680,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/styles/less/modules/title.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.72602737">
+        <state vertical-scroll-proportion="1.1577669">
           <caret line="71" column="17" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
           <folding />
         </state>
@@ -682,7 +688,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/about.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.70569366">
+        <state vertical-scroll-proportion="1.0744811">
           <caret line="44" column="71" selection-start-line="44" selection-start-column="71" selection-end-line="44" selection-end-column="71" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
