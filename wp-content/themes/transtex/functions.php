@@ -67,3 +67,49 @@ function my_custom_post_services() {
     register_post_type( 'services', $args );
 }
 add_action( 'init', 'my_custom_post_services' );
+
+function my_custom_post_news() {
+    $labels = array(
+        'name'               => _x( 'News', 'post type general name' ),
+        'singular_name'      => _x( 'News', 'post type singular name' ),
+        'add_new'            => _x( 'Add News', 'Service' ),
+        'add_new_item'       => __( 'Add New News' ),
+        'edit_item'          => __( 'Edit News' ),
+        'new_item'           => __( 'New News' ),
+        'all_items'          => __( 'All News' ),
+        'view_item'          => __( 'View News' ),
+        'search_items'       => __( 'Search News' ),
+        'not_found'          => __( 'No News found' ),
+        'not_found_in_trash' => __( 'No News found in the Trash' ),
+        'parent_item_colon'  => '',
+        'menu_name'          => 'News'
+    );
+    $args = array(
+        'labels'        => $labels,
+        'description'   => 'Holds our News and News specific data',
+        'public'        => true,
+        'menu_position' => 5,
+        'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
+        'has_archive'   => true,
+    );
+    register_post_type( 'news', $args );
+}
+add_action( 'init', 'my_custom_post_news' );
+
+add_action( 'after_setup_theme', 'wpdocs_theme_setup' );
+function wpdocs_theme_setup() {
+    add_image_size( 'banner-img', 1800 ); //sets the banner size
+    add_image_size( 'post-img', 700); // (cropped)
+}
+
+function excerpt($limit) {
+    $excerpt = explode(' ', get_the_excerpt(), $limit);
+    if (count($excerpt)>=$limit) {
+        array_pop($excerpt);
+        $excerpt = implode(" ",$excerpt).' ...';
+    } else {
+        $excerpt = implode(" ",$excerpt);
+    }
+    $excerpt = preg_replace('`\[[^\]]*\]`','',$excerpt);
+    return $excerpt;
+}
