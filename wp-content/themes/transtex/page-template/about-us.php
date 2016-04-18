@@ -3,6 +3,8 @@
  * Template Name: About Us Page
  */
 get_header();
+global $post;
+$post_slug=$post->post_name;
 ?>
 
 
