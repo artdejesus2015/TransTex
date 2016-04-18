@@ -3,68 +3,47 @@
  * Template Name: Equipments Page
  */
 get_header();
+
+$banner_img = get_field('equipments_banner_background', 'option');
+    // thumbnail
+    $size = 'banner-img';
+    $banner_bg = $banner_img['sizes'][ $size ];
 ?>
 
-
-    <div class="banner bg-r-overlay banner-sub" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/banner-equipment.jpg')">
+    <div class="banner bg-r-overlay banner-sub banner-<?php $post_type = get_post_type( $post->ID ); echo $post_type;?>" style="background-image: url('<?php echo $banner_bg; ?>')">
         <div class="banner_container">
-            <div class="banner-caption">Equipment</div>
+            <div class="banner-caption"><?php the_field('equipments_banner_title', 'option') ?></div>
         </div>
     </div>
 
     <div class="section section-sub section-grid">
         <div class="container">
             <div class="grid-equipment">
-                <div class="grid-item">
-                    <div class="bg col-md-5 grid-img" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/equipment1.jpg')"></div>
-                    <div class="col-md-7">
-                        <div class="grid-desription">
-                            <h3 class="grid-title secondary-grid-title">Gas Treating</h3>
 
-                            <div class="description">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+                <?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+                    $post_bg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'post-img', false, '' ); ?>
+                    <div class="grid-item">
+                        <div class="bg col-md-5 grid-img" style="background-image: url('<?php echo $post_bg[0]; ?>')"></div>
+                        <div class="col-md-7">
+                            <div class="grid-desription">
+                                <h3 class="grid-title secondary-grid-title"><?php the_title(); ?></h3>
+
+                                <div class="description">
+                                    <p><?php the_excerpt(); ?></p>
+                                </div>
+
+                                <a href="<?php the_permalink(); ?>" class="btn btn-primary">Read More</a>
                             </div>
-
-                            <a href="#" class="btn btn-primary">Read More</a>
                         </div>
                     </div>
-                </div>
-
-                <div class="grid-item">
-                    <div class="bg col-md-5 grid-img" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/equipment2.jpg')"></div>
-
-                    <div class="col-md-7">
-                        <div class="grid-desription">
-                            <h3 class="grid-title secondary-grid-title">Gas Processing</h3>
-
-                            <div class="description">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-                            </div>
-
-                            <a href="#" class="btn btn-primary">Read More</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="grid-item">
-                    <div class="bg col-md-5 grid-img" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/equipment3.jpg')"></div>
-
-                    <div class="col-md-7">
-                        <div class="grid-desription">
-                            <h3 class="grid-title secondary-grid-title">Product Equipment</h3>
-
-                            <div class="description">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-                            </div>
-
-                            <a href="#" class="btn btn-primary">Read More</a>
-                        </div>
-                    </div>
-                </div>
+                <?php endwhile;?>
+                <?php endif; ?>
 
             </div>
         </div>
     </div>
+
+
 
 
 <?php get_footer();

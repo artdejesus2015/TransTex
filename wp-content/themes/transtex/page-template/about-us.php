@@ -6,7 +6,7 @@ get_header();
 ?>
 
 
-    <div class="banner bg-r-overlay banner-sub" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/banner-about.jpg')">
+    <div class="banner bg-r-overlay banner-sub banner-<?php echo $post_slug;?>" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/banner-about.jpg')">
         <div class="banner_container">
             <div class="banner-caption">About Us</div>
         </div>

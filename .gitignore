@@ -1,2 +1,4 @@
 .git
 .idea
+wp-content/plugins/acf-options-page
+wp-content/plugins/acf-repeater
