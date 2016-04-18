@@ -7218,6 +7218,10 @@ h6 {
   position: relative;
   z-index: 1;
 }
+.section-sub-contact .content-contact {
+  max-width: 1400px;
+  margin: 0 auto;
+}
 .grid a {
   display: block;
 }
@@ -7493,6 +7497,12 @@ h6 {
 }
 .grid-news .grid-item .grid-desription .description {
   margin-bottom: 30px;
+}
+.list-places .location-name {
+  font-family: 'MontserratSemiBold', sanserif;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #222222;
 }
 .video-wrap {
   width: 1040px;
