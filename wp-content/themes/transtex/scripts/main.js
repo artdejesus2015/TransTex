@@ -55,6 +55,14 @@
         }  // out
     );
 
+    $(".navbar-toggle").click(function(){
+        $(".navbar-menu-collapse").addClass("show");
+    });
+
+    $(".mobile-close").click(function(){
+        $(".navbar-menu-collapse").removeClass("show");
+    });
+
 
 
 })(window, document, jQuery);

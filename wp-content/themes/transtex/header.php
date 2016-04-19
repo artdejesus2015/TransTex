@@ -57,6 +57,8 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="navbar-menu-collapse">
 
+                <button class="mobile-close"><span class="icon-cross"></span></button>
+
                 <?php
 
                 $defaults = array(

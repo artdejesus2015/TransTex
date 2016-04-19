@@ -84,6 +84,23 @@
 
   .navbar-menu-collapse {
     text-align: right;
+    .transition(all ease-in-out .3s);
+
+    .mobile-close {
+      background-color: transparent;
+      border: none;
+      color: #fff;
+      font-size: 35px;
+      padding: 10px 25px;
+      display: none;
+      text-align: right;
+      width: 100%;
+      outline: none !important;
+    }
+
+    &.show {
+      height: 100%;
+    }    
   }
 
   &.navbar-animated {
