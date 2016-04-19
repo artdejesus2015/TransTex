@@ -8,7 +8,7 @@ $post_slug=$post->post_name;
 ?>
 
 
-    <div class="banner bg-r-overlay banner-sub banner-<?php echo $post_slug;?>" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/banner-about.jpg')">
+    <div class="banner bg-r-overlay bg-fixed banner-sub banner-<?php echo $post_slug;?>" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/banner-about.jpg')">
         <div class="banner_container">
             <div class="banner-caption"><?php the_title(); ?></div>
         </div>
@@ -32,7 +32,7 @@ $post_slug=$post->post_name;
         </div>
     </div>
 
-    <div class="section bg-r-overlay section-sub section-management" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/management-team-bg.jpg')">
+    <div class="section bg-r-overlay bg-fixed section-sub section-management" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/management-team-bg.jpg')">
         <div class="container">
             <div class="content">
                 <h2 class="title secondary-title">Management Team</h2>
@@ -142,7 +142,7 @@ $post_slug=$post->post_name;
         </div>
     </div>
 
-    <div class="section bg-r-overlay section-sub section-employee" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/employee-bg.jpg')">
+    <div class="section bg-r-overlay bg-fixed section-sub section-employee" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/employee-bg.jpg')">
         <div class="container">
             <div class="content">
                 <h2 class="title secondary-title title-white">Employee Spotlight</h2>

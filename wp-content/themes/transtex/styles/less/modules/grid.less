@@ -334,13 +334,45 @@
 
 .list-places {
 
+  .list-item {
+    margin-bottom: 2em;
+  }
+
   .location-name {
     font-family: @MontserratSBold;
     font-size: 12px;
     text-transform: uppercase;
     color: #222222;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
   }
 
   .location-link {
+    font-family: @RobotoBold;
+    font-size: 18px;
+    color: #9b283a;
+    text-decoration: none !important;
+
+    &:hover, &:focus {
+      color: #c42841;
+    }
+
+    span {
+      padding-left: 5px;
+    }
+  }
+
+  .location-address {
+    font-size: 18px;
+
+    span {
+      font-family: @RobotoBold;
+      color: #9b283a;
+    }
+
+    a {
+      font-family: @RoboLight;
+      color: #333333;
+    }
   }
 }

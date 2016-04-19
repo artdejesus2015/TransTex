@@ -52,3 +52,72 @@
     }
   }
 }
+
+.form-wrap {
+  .form-control {
+    font-family: @ProximaNoveSBold;
+    font-size: 16px;
+    color: #555555;
+    border: 1px solid #f3f3f3;
+    border-radius: 0;
+    padding: 30px 20px;
+    margin-bottom: 2em;
+    min-height: 62px;
+  }
+
+  select {
+    -webkit-appearance: none;
+    padding: 20px !important;
+    background: url('../images/select-icon.png') no-repeat 97% 50%;
+  }
+
+  .form-control::-webkit-input-placeholder {
+    color: #555555;
+  }
+
+  .form-control:-moz-placeholder {
+    color: #555555;
+  }
+
+  .form-control::-moz-placeholder {
+    color: #555555;
+  }
+
+  .form-control:-ms-input-placeholder {
+    color: #555555;
+  }
+
+  input[type='file'] {
+    visibility: hidden;
+    position: absolute;
+  }
+
+  .file-form-control {
+    padding: 0;
+
+    span {
+      display: inline-block;
+      min-height: 62px;
+      vertical-align: top;
+    }
+
+    .label-upload {
+      width: 59%;
+      padding: 20px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .label-black {
+      float: right;
+      background-color: #222222;
+      color: #fff;
+      margin: -1px;
+      text-transform: uppercase;
+      padding: 20px;
+    }
+  }
+}
+
+

@@ -99,7 +99,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             </div>
         </div>
 
-        <div class="section bg-r-overlay section-we-do" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/bg-we-do.jpg')">
+        <div class="section bg-r-overlay bg-fixed section-we-do" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/bg-we-do.jpg')">
             <div class="container">
                 <div class="content">
                     <h2 class="title section-title title-white">watch how we do it</h2>
@@ -210,7 +210,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             </div>
         </div>
 
-        <div class="section bg-r-overlay section-contact section-contact-home" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/contact-home-bg.jpg')">
+        <div class="section bg-r-overlay bg-fixed section-contact section-contact-home" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/contact-home-bg.jpg')">
             <div class="container">
                 <div class="content">
                     <h2 class="title slug-title">Need more information?</h2>

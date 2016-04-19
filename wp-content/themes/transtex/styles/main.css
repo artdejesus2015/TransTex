@@ -6755,14 +6755,24 @@ button.close {
   src: url('../fonts/RobotoItalic.eot') format('embedded-opentype'), url('../fonts/RobotoItalic.woff2') format('woff2'), url('../fonts/RobotoItalic.woff') format('woff'), url('../fonts/RobotoItalic.ttf') format('truetype'), url('../fonts/RobotoItalic.svg#RobotoItalic') format('svg');
 }
 @font-face {
+  font-family: 'RobotoBold';
+  src: url('../fonts/RobotoBold.eot');
+  src: url('../fonts/RobotoBold.eot') format('embedded-opentype'), url('../fonts/RobotoBold.woff2') format('woff2'), url('../fonts/RobotoBold.woff') format('woff'), url('../fonts/RobotoBold.ttf') format('truetype'), url('../fonts/RobotoBold.svg#RobotoBold') format('svg');
+}
+@font-face {
   font-family: 'GeorgiaItalic';
   src: url('../fonts/GeorgiaItalic.eot');
   src: url('../fonts/GeorgiaItalic.eot') format('embedded-opentype'), url('../fonts/GeorgiaItalic.woff2') format('woff2'), url('../fonts/GeorgiaItalic.woff') format('woff'), url('../fonts/GeorgiaItalic.ttf') format('truetype'), url('../fonts/GeorgiaItalic.svg#GeorgiaItalic') format('svg');
 }
 @font-face {
+  font-family: 'proximanovasemiboldwebfont';
+  src: url('../fonts/proximanovasemiboldwebfont.eot');
+  src: url('../fonts/proximanovasemiboldwebfont.eot') format('embedded-opentype'), url('../fonts/proximanovasemiboldwebfont.woff2') format('woff2'), url('../fonts/proximanovasemiboldwebfont.woff') format('woff'), url('../fonts/proximanovasemiboldwebfont.ttf') format('truetype'), url('../fonts/proximanovasemiboldwebfont.svg#proximanovasemiboldwebfont') format('svg');
+}
+@font-face {
   font-family: 'icomoon';
-  src: url('../fonts/icomoon.eot?8nvy9t');
-  src: url('../fonts/icomoon.eot?8nvy9t#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?8nvy9t') format('truetype'), url('../fonts/icomoon.woff?8nvy9t') format('woff'), url('../fonts/icomoon.svg?8nvy9t#icomoon') format('svg');
+  src: url('../fonts/icomoon.eot?vd4ml9');
+  src: url('../fonts/icomoon.eot?vd4ml9#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?vd4ml9') format('truetype'), url('../fonts/icomoon.woff?vd4ml9') format('woff'), url('../fonts/icomoon.svg?vd4ml9#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -6779,6 +6789,9 @@ button.close {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.icon-angle-right:before {
+  content: "\e901";
 }
 .icon-twitter:before {
   content: "\e906";
@@ -6833,6 +6846,10 @@ h6 {
   font-family: 'RobotoMedium', sanserif;
   color: #c42841;
 }
+.description a:hover,
+.description a:focus {
+  color: #BA485A;
+}
 .description .more-link {
   display: none;
 }
@@ -6873,8 +6890,12 @@ h6 {
   height: 100%;
   vertical-align: middle;
 }
+.bg-fixed {
+  background-attachment: fixed;
+}
 .btn {
   letter-spacing: 3px;
+  outline: none !important;
 }
 .btn-primary {
   background-color: #971b2f;
@@ -6946,6 +6967,60 @@ h6 {
 }
 .search-form-wrap .navbar-search-form .btn-transparent {
   padding: 0;
+}
+.form-wrap .form-control {
+  font-family: 'proximanovasemiboldwebfont', sanserif;
+  font-size: 16px;
+  color: #555555;
+  border: 1px solid #f3f3f3;
+  border-radius: 0;
+  padding: 30px 20px;
+  margin-bottom: 2em;
+  min-height: 62px;
+}
+.form-wrap select {
+  -webkit-appearance: none;
+  padding: 20px !important;
+  background: url('../images/select-icon.png') no-repeat 97% 50%;
+}
+.form-wrap .form-control::-webkit-input-placeholder {
+  color: #555555;
+}
+.form-wrap .form-control:-moz-placeholder {
+  color: #555555;
+}
+.form-wrap .form-control::-moz-placeholder {
+  color: #555555;
+}
+.form-wrap .form-control:-ms-input-placeholder {
+  color: #555555;
+}
+.form-wrap input[type='file'] {
+  visibility: hidden;
+  position: absolute;
+}
+.form-wrap .file-form-control {
+  padding: 0;
+}
+.form-wrap .file-form-control span {
+  display: inline-block;
+  min-height: 62px;
+  vertical-align: top;
+}
+.form-wrap .file-form-control .label-upload {
+  width: 59%;
+  padding: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.form-wrap .file-form-control .label-black {
+  float: right;
+  background-color: #222222;
+  color: #fff;
+  margin: -1px;
+  text-transform: uppercase;
+  padding: 20px;
 }
 .title {
   letter-spacing: 3px;
@@ -7036,6 +7111,31 @@ h6 {
   width: 310px;
   height: auto;
 }
+.navbar-menu .navbar-toggle {
+  border: none;
+  margin: 22px 15px 0;
+  background-color: transparent !important;
+}
+.navbar-menu .navbar-toggle .icon-bar {
+  background-color: #971B2F;
+  width: 35px;
+  margin-bottom: 5px;
+}
+.navbar-menu .navbar-toggle .sr-only {
+  position: absolute;
+  left: -45px;
+  top: 4px;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  clip: auto;
+  border: 0;
+  font-family: 'MontserratSemiBold', sanserif;
+  font-size: 14px;
+  color: #333333;
+}
 .navbar-menu .navbar-nav {
   float: none;
   text-align: center;
@@ -7070,8 +7170,36 @@ h6 {
   text-align: right;
 }
 .navbar-menu.navbar-animated {
-  -webkit-box-shadow: 0 0 10px #eee;
-  box-shadow: 0 0 10px #eee;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.post-type-archive-equipments .navbar-menu .navbar-nav .menu-item-25 a {
+  color: #c42841;
+}
+.post-type-archive-services .navbar-menu .navbar-nav .menu-item-24 a {
+  color: #c42841;
+}
+.top-head {
+  display: none;
+  overflow: hidden;
+  background-color: #971B2F;
+}
+.top-head .search-form-wrap {
+  padding-right: 10px;
+}
+.top-head .search-form-wrap .navbar-search-form {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.top-head .search-form-wrap .navbar-search-form .form-control {
+  text-align: left;
+  padding: 0 15px;
+  width: 340px;
+}
+.top-head .search-form-wrap .contact-link {
+  color: #fff;
+  padding-top: 11px;
+  padding-bottom: 11px;
 }
 .banner {
   background-color: #000;
@@ -7498,11 +7626,40 @@ h6 {
 .grid-news .grid-item .grid-desription .description {
   margin-bottom: 30px;
 }
+.list-places .list-item {
+  margin-bottom: 2em;
+}
 .list-places .location-name {
   font-family: 'MontserratSemiBold', sanserif;
   font-size: 12px;
   text-transform: uppercase;
   color: #222222;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+.list-places .location-link {
+  font-family: 'RobotoBold', sanserif;
+  font-size: 18px;
+  color: #9b283a;
+  text-decoration: none !important;
+}
+.list-places .location-link:hover,
+.list-places .location-link:focus {
+  color: #c42841;
+}
+.list-places .location-link span {
+  padding-left: 5px;
+}
+.list-places .location-address {
+  font-size: 18px;
+}
+.list-places .location-address span {
+  font-family: 'RobotoBold', sanserif;
+  color: #9b283a;
+}
+.list-places .location-address a {
+  font-family: 'RobotoLight', sanserif;
+  color: #333333;
 }
 .video-wrap {
   width: 1040px;
@@ -7889,7 +8046,7 @@ h6 {
     padding-bottom: 25px;
   }
 }
-@media (max-width: 1461px) {
+@media (max-width: 1470px) {
   .navbar-menu .navbar-nav li a {
     padding: 29px 10px;
     font-size: 12px;
@@ -7912,5 +8069,34 @@ h6 {
   .search-form-wrap .navbar-search-form {
     padding-top: 22px;
     padding-bottom: 22px;
+  }
+}
+@media (max-width: 1267px) {
+  .top-head {
+    display: block;
+  }
+  .search-form-wrap-desk {
+    display: none;
+  }
+}
+@media (max-width: 900px) {
+  .top-head {
+    display: none;
+  }
+  .navbar-menu-collapse {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #004B65;
+    height: 0;
+    overflow: hidden;
+  }
+  .navbar-header {
+    display: block;
+    float: none;
+  }
+  .navbar-toggle {
+    display: block;
   }
 }

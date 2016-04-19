@@ -26,20 +26,36 @@
 
 <header>
     <nav class="navbar navbar-default navbar-menu">
+        <div class="top-head">
+            <div class="container-fluid">
+                <ul class="search-form-wrap">
+                    <li>
+                        <form class="navbar-form navbar-left navbar-search-form" role="search">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search">
+                            </div>
+                            <button type="submit" class="btn btn-transparent"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/search-icon.png"></button>
+                        </form>
+                    </li>
+                    <li> <a href="#" class="contact-link">CALL: 713-654-4440 </a></li>
+                </ul>
+            </div>
+        </div>
+
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
+                <button type="button" class="navbar-toggle">
+                    <span class="sr-only">Menu</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.php"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png"></a>
+                <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png"></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-menu-collapse" id="bs-example-navbar-collapse-1">
+            <div class="navbar-menu-collapse">
 
                 <?php
 
@@ -52,7 +68,7 @@
 
                 ?>
 
-                <ul class="search-form-wrap">
+                <ul class="search-form-wrap search-form-wrap-desk">
                     <li>
                         <form class="navbar-form navbar-left navbar-search-form" role="search">
                             <div class="form-group">

@@ -8,10 +8,10 @@ global $post;
 $post_slug=$post->post_name;
 
 if ( have_posts() ) : while ( have_posts() ) : the_post();
-    $banner_bg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'post-img', false, '' );
+    $banner_bg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'banner-img', false, '' );
 ?>
 
-    <div class="banner bg-r-overlay banner-sub banner-<?php echo $post_slug;?>" style="background-image: url('<?php echo $banner_bg[0]; ?>')">
+    <div class="banner bg-r-overlay bg-fixed banner-sub banner-<?php echo $post_slug;?>" style="background-image: url('<?php echo $banner_bg[0]; ?>')">
         <div class="banner_container">
             <div class="banner-caption"><?php the_title(); ?></div>
         </div>

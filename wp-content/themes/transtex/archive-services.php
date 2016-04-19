@@ -11,7 +11,7 @@ get_header();
     $banner_bg = $banner_img['sizes'][ $size ];
     ?>
 
-    <div class="banner bg-r-overlay banner-sub banner-<?php $post_type = get_post_type( $post->ID ); echo $post_type;?>" style="background-image: url('<?php echo $banner_bg; ?>')">
+    <div class="banner bg-r-overlay bg-fixed banner-sub banner-<?php $post_type = get_post_type( $post->ID ); echo $post_type;?>" style="background-image: url('<?php echo $banner_bg; ?>')">
         <div class="banner_container">
             <div class="banner-caption"><?php the_field('services_banner_title', 'option') ?></div>
         </div>

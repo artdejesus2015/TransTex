@@ -18,6 +18,34 @@
     height: auto;
   }
 
+  .navbar-toggle {
+    border: none;
+    margin: 22px 15px 0;
+    background-color: transparent !important;
+    
+    .icon-bar {
+      background-color: #971B2F;
+      width: 35px;
+      margin-bottom: 5px;
+    }
+
+    .sr-only {
+      position: absolute;
+      left: -45px;
+      top: 4px;
+      width: auto;
+      height: auto;
+      margin: 0;
+      padding: 0;
+      overflow: visible;
+      clip: auto;
+      border: 0;
+      font-family: 'MontserratSemiBold', sanserif;
+      font-size: 14px;
+      color: #333333;
+    }
+  }
+
   .navbar-nav {
     float: none;
     text-align: center;
@@ -59,6 +87,59 @@
   }
 
   &.navbar-animated {
-    .box-shadow(0 0 10px #eee);
+    .box-shadow(0 0 10px rgba(0,0,0,0.1));
   }
 }
+
+.post-type-archive-equipments {
+  .navbar-menu {
+    .navbar-nav {
+      .menu-item-25  {
+        a {
+          color: #c42841;
+        }
+      }
+    }
+  }
+}
+
+.post-type-archive-services {
+  .navbar-menu {
+    .navbar-nav {
+      .menu-item-24  {
+        a {
+          color: #c42841;
+        }
+      }
+    }
+  }
+}
+
+.top-head {
+  display: none;
+  overflow: hidden;
+  background-color: #971B2F;
+
+  .search-form-wrap {
+    padding-right: 10px;
+
+    .navbar-search-form {
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+      .form-control {
+        text-align: left;
+        padding: 0 15px;
+        width: 340px;
+      }
+
+    }
+
+    .contact-link {
+      color: #fff;
+      padding-top: 11px;
+      padding-bottom: 11px;
+    }
+  }
+}
+

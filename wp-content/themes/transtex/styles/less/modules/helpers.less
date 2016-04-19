@@ -5,8 +5,11 @@
 @RoboLight: 'RobotoLight', sanserif;
 @RobotMedium: 'RobotoMedium', sanserif;
 @Robotoitalic: 'RobotoItalic', sanserif;
+@RobotoBold: 'RobotoBold', sanserif;
 
 @GeorgiaItalic:  'GeorgiaItalic', sanserif;
+
+@ProximaNoveSBold: 'proximanovasemiboldwebfont', sanserif;
 
 .section {
   padding: 80px 0;
@@ -27,6 +30,10 @@
   a {
     font-family: @RobotMedium;
     color: #c42841;
+
+    &:hover, &:focus {
+      color: #BA485A;
+    }
   }
 
   .more-link {
@@ -75,4 +82,8 @@
   display: inline-block;
   height: 100%;
   vertical-align: middle;
+}
+
+.bg-fixed {
+  background-attachment: fixed;
 }
