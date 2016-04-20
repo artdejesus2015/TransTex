@@ -2,7 +2,7 @@
 <project version="4">
   <component name="PublishConfigData">
     <serverData>
-      <paths name="D6 WebDev">
+      <paths name="D6 web">
         <serverdata>
           <mappings>
             <mapping deploy="/public_html/transtex" local="$PROJECT_DIR$" web="/" />

@@ -4,16 +4,15 @@
  */
 get_header();
 
-global $post;
-$post_slug=$post->post_name;
-
-if ( have_posts() ) : while ( have_posts() ) : the_post();
-    $banner_bg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'banner-img', false, '' );
+$banner_img = get_field('news_banner_background', 'option');
+// thumbnail
+$size = 'banner-img';
+$banner_bg = $banner_img['sizes'][ $size ];
 ?>
 
-    <div class="banner bg-r-overlay bg-fixed banner-sub banner-<?php echo $post_slug;?>" style="background-image: url('<?php echo $banner_bg[0]; ?>')">
+    <div class="banner bg-r-overlay bg-fixed banner-sub banner-news" style="background-image: url('<?php echo $banner_bg; ?>')">
         <div class="banner_container">
-            <div class="banner-caption"><?php the_title(); ?></div>
+            <div class="banner-caption"><?php the_field('news_banner_title', 'option'); ?></div>
         </div>
     </div>
 
@@ -49,7 +48,4 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
         </div>
     </div>
 
-
-<?php endwhile;?>
-<?php endif; ?>
 <?php get_footer();
