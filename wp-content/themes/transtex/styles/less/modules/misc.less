@@ -332,3 +332,39 @@
     position: absolute;
   }
 }
+
+
+
+.tax-wrap {
+  margin-bottom: 60px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  .tax-description {
+    text-align: left;
+    padding: 30px 50px 30px 30px;
+
+    .description {
+      margin-bottom: 0;
+    }
+  }
+
+  .tax-img {
+    -webkit-box-shadow: 5px 5px 20px #DCDCDC;
+    box-shadow: 5px 5px 20px #DCDCDC;
+    border: 15px solid #fff;
+  }
+}

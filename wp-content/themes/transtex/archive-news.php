@@ -20,10 +20,7 @@ $banner_bg = $banner_img['sizes'][ $size ];
         <div class="container">
             <div class="grid-news">
 
-                <?php
-                $args = array( 'post_type' => 'news', 'posts_per_page' => -1 );
-                $loop = new WP_Query( $args );
-                while ( $loop->have_posts() ) : $loop->the_post();
+                <?php if ( have_posts() ) : while ( have_posts() ) : the_post();
                     $post_bg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'post-img', false, '' ); ?>
 
                     <div class="grid-item">
@@ -42,7 +39,8 @@ $banner_bg = $banner_img['sizes'][ $size ];
                         </div>
                     </div>
 
-                <?php endwhile; ?>
+                <?php endwhile;?>
+                <?php endif; ?>
 
             </div>
         </div>

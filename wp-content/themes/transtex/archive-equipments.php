@@ -19,25 +19,38 @@ $banner_img = get_field('equipments_banner_background', 'option');
     <div class="section section-sub section-grid">
         <div class="container">
             <div class="grid-equipment">
+                <?php
+                    $categories = get_terms(array(
+                        'taxonomy' => 'equipments_category',
+                        'hide_empty' => false,
+                    ));
 
-                <?php if ( have_posts() ) : while ( have_posts() ) : the_post();
-                    $post_bg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'post-img', false, '' ); ?>
-                    <div class="grid-item">
-                        <div class="bg col-md-5 grid-img" style="background-image: url('<?php echo $post_bg[0]; ?>')"></div>
-                        <div class="col-md-7">
-                            <div class="grid-desription">
-                                <h3 class="grid-title secondary-grid-title"><?php the_title(); ?></h3>
+                    foreach ( $categories as $i => $term ):
+                        $category_image = get_field('category_image', $term);
+                        // thumbnail
+                        $category_size = 'post-img';
+                        $category_img = $category_image['sizes'][ $category_size ];
+                        ?>
 
-                                <div class="description">
-                                    <p><?php the_excerpt(); ?></p>
+
+                        <div class="grid-item">
+                            <div class="bg col-md-5 grid-img" style="background-image: url('<?php echo $category_img; ?>')"></div>
+                            <div class="col-md-7">
+                                <div class="grid-desription">
+                                    <h3 class="grid-title secondary-grid-title"><?php echo $term->name; ?></h3>
+
+                                    <div class="description">
+                                        <?php
+                                        $content = get_field('category_description', $term);
+                                        $trimmed_content = wp_trim_words( $content, 70, '...' );?>
+                                        <p><?php echo $trimmed_content; ?></p>
+                                    </div>
+
+                                    <a href="<?php echo get_term_link( $term ); ?>" class="btn btn-primary">Read More</a>
                                 </div>
-
-                                <a href="<?php the_permalink(); ?>" class="btn btn-primary">Read More</a>
                             </div>
                         </div>
-                    </div>
-                <?php endwhile;?>
-                <?php endif; ?>
+                <?php endforeach; ?>
 
             </div>
         </div>

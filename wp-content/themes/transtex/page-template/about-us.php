@@ -3,12 +3,13 @@
  * Template Name: About Us Page
  */
 get_header();
-global $post;
-$post_slug=$post->post_name;
+
+$bg_img = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'banner-img', false, '' );
+if ( have_posts() ) : while ( have_posts() ) : the_post();
 ?>
 
 
-    <div class="banner bg-r-overlay bg-fixed banner-sub banner-<?php echo $post_slug;?>" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/banner-about.jpg')">
+    <div class="banner bg-r-overlay bg-fixed banner-sub banner-about" style="background-image: url('<?php echo $bg_img[0]; ?>')">
         <div class="banner_container">
             <div class="banner-caption"><?php the_title(); ?></div>
         </div>
@@ -17,16 +18,10 @@ $post_slug=$post->post_name;
     <div class="section section-sub section-intro section-intro-sub">
         <div class="container">
             <div class="content">
-                <h2 class="title secondary-title">Who We Are</h2>
+                <h2 class="title secondary-title"><?php the_field('section_title'); ?></h2>
 
                 <div class="description">
-                    <p>We specialize in the leasing and sale of amine treating plants of all sizes, as well as other gas processing equipment. TransTex is located in Houston, TX and has equipment operating across the Southern and Northeastern United States. We have a vast inventory of
-                        <a href="#">gas treating</a> and <a href="#">processing</a>, and <a href="#">production equipment</a> for all types of projects.</p>
-                    <p>With collective decades of field experience behind us, and the business savvy that comes from heading up successful ventures around the world, TransTex has become the go-to service provider in the natural gas industry.</p>
-                    <p>With collective decades of field experience behind us, and the business savvy that comes from heading up successful ventures around the world, TransTex has become the go-to service provider in the natural gas industry.</p>
-                    <p>TransTex was founded in 2006 and acquired by Eureka Hunter Pipeline in 2012.</p>
-                    <p>We have an expansive inventory available for expedited installation as well as the expertise required to ensure a smooth and successful startup. We always strive to earn and deserve your business. It’s this commitment to excellence that makes TransTex an industry leader and innovator in the natural gas treating and processing industry.</p>
-                    <p>We’re proud to say that a significant portion of our business is made up of repeat customers. To many of our clients, we’re thought of as a long-term partner that’s dedicated to their success and growth.</p>
+                    <?php the_content(); ?>
                 </div>
             </div>
         </div>
@@ -180,5 +175,6 @@ $post_slug=$post->post_name;
     </div>
 
 
-
+<?php endwhile;?>
+<?php endif; ?>
 <?php get_footer();

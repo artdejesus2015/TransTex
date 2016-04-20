@@ -3,12 +3,15 @@
  * Template Name: Operations Page
  */
 get_header();
+
+$bg_img = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'banner-img', false, '' );
+if ( have_posts() ) : while ( have_posts() ) : the_post();
 ?>
 
 
-    <div class="banner bg-r-overlay bg-fixed banner-sub banner-<?php echo $post_slug;?>" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/banner-equipment.jpg')">
+    <div class="banner bg-r-overlay bg-fixed banner-sub banner-operations" style="background-image: url('<?php echo $bg_img[0]; ?>')">
         <div class="banner_container">
-            <div class="banner-caption">Operations</div>
+            <div class="banner-caption"><?php the_title(); ?></div>
         </div>
     </div>
 
@@ -314,30 +317,50 @@ get_header();
             <div class="content">
                 <h2 class="title secondary-title">How We Operate</h2>
                 <div class="description">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-
-                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                    <?php the_content(); ?>
                 </div>
 
                 <div class="gallery-wrap">
-                    <div class="img-wrap img-full">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/operation-gallery1.jpg">
-                    </div>
+                    <?php
+                        if( have_rows('operation_gallery') ):
+                            while( have_rows('operation_gallery') ): the_row();
+                                $large_img = get_sub_field('large_image_operations');
 
-                    <div class="img-half-wrap">
-                        <div class="img-wrap img-half">
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/operation-gallery2.jpg">
-                        </div>
+                                // thumbnail
+                                $size = 'gallery-large';
+                                $large_img_thumb = $large_img['sizes'][ $size ];
 
-                        <div class="img-wrap img-half">
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/operation-gallery3.jpg">
-                        </div>
-                    </div>
+                                ?>
+
+                                <div class="img-wrap img-full">
+                                    <img src="<?php echo $large_img_thumb;?>">
+                                </div>
+
+                                <div class="img-half-wrap">
+
+                                    <?php
+                                    if( have_rows('small_images_operations') ):
+                                        while( have_rows('small_images_operations') ): the_row();
+                                            $small_img = get_sub_field('small_image_operations');
+
+                                            // thumbnail
+                                            $size_small = 'gallery-small';
+                                            $small_img_thumb = $small_img['sizes'][ $size_small ];?>
+                                            <div class="img-wrap img-half">
+                                                <img src="<?php echo $small_img_thumb;?>">
+                                            </div>
+                                        <?php  endwhile; endif;?>
 
 
+
+                                </div>
+
+                    <?php  endwhile; endif;?>
 
                 </div>
             </div>
         </div>
     </div>
+<?php endwhile;?>
+<?php endif; ?>
 <?php get_footer();

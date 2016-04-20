@@ -1,12 +1,7 @@
 <?php
 get_header();
 
-global $post;
-$post_slug=$post->post_name;
-
 $bg_img = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full', false, '' );
-
-if ( have_posts() ) : while ( have_posts() ) : the_post();
 ?>
 
         <div class="banner bg-r-overlay banner-home" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/banner-home.jpg')">
@@ -33,50 +28,42 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             <div class="container-fluid">
                 <div class="grid grid-box grid-intro-home">
                     <div class="row">
-                        <div class="col-md-4">
-                            <a href="#">
-                                <div class="bg-r-overlay grid-item" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/grid-intro-home1.jpg')">
-                                    <h3 class="title grid-title">Gas Treating</h3>
-                                    <div class="grid-caption">
-                                        <h3 class="title caption-title">Gas Treating</h3>
-                                        <div class="description">
-                                            <p>Our understanding of and expertise in the natural gas industry goes much farther than just amine treating plants. TransTex employees have decades of experience ...</p>
-                                        </div>
-                                        <div class="btn btn-primary">Learn More</div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
 
-                        <div class="col-md-4">
-                            <a href="#">
-                                <div class="bg-r-overlay grid-item" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/grid-intro-home2.jpg')">
-                                    <h3 class="title grid-title">gas processing</h3>
-                                    <div class="grid-caption">
-                                        <h3 class="title caption-title">gas processing</h3>
-                                        <div class="description">
-                                            <p>Our understanding of and expertise in the natural gas industry goes much farther than just amine treating plants. TransTex employees have decades of experience ...</p>
-                                        </div>
-                                        <div class="btn btn-primary">Learn More</div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+                        <?php
+                        $categories = get_terms(array(
+                            'taxonomy' => 'equipments_category',
+                            'hide_empty' => false,
+                        ));
 
-                        <div class="col-md-4">
-                            <a href="#">
-                                <div class="bg-r-overlay grid-item" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/grid-intro-home3.jpg')">
-                                    <h3 class="title grid-title">production equipment</h3>
-                                    <div class="grid-caption">
-                                        <h3 class="title caption-title">production equipment</h3>
-                                        <div class="description">
-                                            <p>Our understanding of and expertise in the natural gas industry goes much farther than just amine treating plants. TransTex employees have decades of experience ...</p>
+                        foreach ( $categories as $i => $term ):
+                            $category_image = get_field('category_image', $term);
+                            // thumbnail
+                            $category_size = 'post-img';
+                            $category_img = $category_image['sizes'][ $category_size ];
+                            ?>
+
+
+                            <div class="col-md-4">
+                                <a href="<?php echo get_term_link( $term ); ?>">
+                                    <div class="bg-r-overlay grid-item" style="background-image: url('<?php echo $category_img; ?>')">
+                                        <h3 class="title grid-title"><?php echo $term->name; ?></h3>
+                                        <div class="grid-caption">
+                                            <h3 class="title caption-title"><?php echo $term->name; ?></h3>
+                                            <div class="description">
+                                                <?php
+                                                $content = get_field('category_description', $term);
+                                                $trimmed_content = wp_trim_words( $content, 25, '...' );?>
+                                                <p><?php echo $trimmed_content; ?></p>
+                                            </div>
+                                            <div class="btn btn-primary">Learn More</div>
                                         </div>
-                                        <div class="btn btn-primary">Learn More</div>
                                     </div>
-                                </div>
-                            </a>
-                        </div>
+                                </a>
+                            </div>
+                        <?php endforeach; ?>
+
+
+
 
                     </div>
                 </div>
@@ -85,15 +72,13 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 
                 <div class="content">
                    <div class="container">
-                       <h2 class="title section-title after-line">about transtex treating</h2>
+                       <h2 class="title section-title after-line"><?php the_field('section_title_home_intro', 'option') ?></h2>
 
                        <div class="description">
-                           <p>We specialize in the leasing and sale of amine treating plants of all sizes, as well as other gas processing equipment. TransTex is located in Houston, TX and has equipment operating across the Southern and Northeastern United States. We have a vast inventory of
-                               <a href="#">gas treating</a> and <a href="#">processing</a>, and <a href="#">production equipment</a> for all types of projects.</p>
-                           <p>With collective decades of field experience behind us, and the business savvy that comes from heading up successful ventures around the world, TransTex has become the go-to service provider in the natural gas industry.</p>
+                           <?php the_field('section_description_home', 'option') ?>
                        </div>
 
-                       <a href="#" class="btn btn-primary">Learn More</a>
+                       <a href="<?php the_field('section_button_link_home', 'option') ?>" class="btn btn-primary">Learn More</a>
                    </div>
                 </div>
             </div>
@@ -174,56 +159,49 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                 </div>
 
                 <ul class="list list-news">
-                    <li>
-                        <div class="list-item">
-                            <span class="list-date">mar 08, 2016</span>
 
-                            <h3 class="list-title">Shale gas proves more resilient than U.S. government expected</h3>
-                            <div class="description">
-                                <p>WASHINGTON, D.C. (Bloomberg) — America’s energy explorers have become so good at pulling natural gas out of the ground that government ...</p>
-                            </div>
-                        </div>
-                    </li>
+                    <?php
+                    $args = array( 'post_type' => 'news', 'posts_per_page' => 3 );
+                    $loop = new WP_Query( $args );
+                    while ( $loop->have_posts() ) : $loop->the_post();?>
 
-                    <li>
-                        <div class="list-item">
-                            <span class="list-date">jan 12, 2016</span>
+                        <li>
+                            <a href="<?php the_permalink(); ?>">
+                                <div class="list-item">
+                                    <span class="list-date"><?php the_time('M j, Y'); ?></span>
 
-                            <h3 class="list-title">US Shale Output To Fall 116,000 Bpd mo/mo In Feb.</h3>
-                            <div class="description">
-                                <p>NEW YORK, Jan 11 (Reuters) – U.S. shale oil production is expected to fall for a seventh month in a row in February, declining at about the same ...</p>
-                            </div>
-                        </div>
-                    </li>
+                                    <h3 class="list-title"><?php the_title(); ?></h3>
+                                    <div class="description">
+                                        <p><?php echo excerpt(25); ?></p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
 
-                    <li>
-                        <div class="list-item">
-                            <span class="list-date">nov 18, 2016</span>
+                    <?php endwhile; ?>
 
-                            <h3 class="list-title">North Dakota’s Bakken pumps less oil for first time in decade</h3>
-                            <div class="description">
-                                <p>HOUSTON (Bloomberg) — The shale boom in North Dakota has softened to a whisper. The state’s Bakken oil region produced less oil ...</p>
-                            </div>
-                        </div>
-                    </li>
                 </ul>
             </div>
         </div>
 
-        <div class="section bg-r-overlay bg-fixed section-contact section-contact-home" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/contact-home-bg.jpg')">
+        <?php
+            $section_bg = get_field('contact_section_background', 'option');
+            // thumbnail
+            $size_bg = 'background-img';
+            $section_bg_img = $section_bg['sizes'][ $size_bg ];
+        ?>
+
+        <div class="section bg-r-overlay bg-fixed section-contact section-contact-home" style="background-image: url('<?php echo $section_bg_img;?>')">
             <div class="container">
                 <div class="content">
-                    <h2 class="title slug-title">Need more information?</h2>
+                    <h2 class="title slug-title"><?php the_field('contact_section_title', 'option') ?></h2>
 
                     <div class="description">
-                        <p>Get access to expert assessments. Give us a Call.</p>
+                        <?php the_field('contact_section_description', 'option') ?>
                     </div>
-                    <a href="#" class="btn btn-primary">Contact Us</a>
+                    <a href="<?php the_field('contact_section_button_link', 'option') ?>" class="btn btn-primary">Contact Us</a>
                 </div>
             </div>
         </div>
-
-<?php endwhile;?>
-<?php endif; ?>
 
 <?php get_footer();

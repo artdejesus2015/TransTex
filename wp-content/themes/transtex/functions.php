@@ -40,6 +40,28 @@ function my_custom_post_equipments() {
 }
 add_action( 'init', 'my_custom_post_equipments' );
 
+function my_taxonomies_equipments() {
+    $labels = array(
+        'name'              => _x( 'Equipment Categories', 'taxonomy general name' ),
+        'singular_name'     => _x( 'Equipment Category', 'taxonomy singular name' ),
+        'search_items'      => __( 'Search Equipment Categories' ),
+        'all_items'         => __( 'All Equipment Categories' ),
+        'parent_item'       => __( 'Parent Equipment Category' ),
+        'parent_item_colon' => __( 'Parent Equipment Category:' ),
+        'edit_item'         => __( 'Edit Equipment Category' ),
+        'update_item'       => __( 'Update Equipment Category' ),
+        'add_new_item'      => __( 'Add New Equipment Category' ),
+        'new_item_name'     => __( 'New Equipment Category' ),
+        'menu_name'         => __( 'Equipment Categories' ),
+    );
+    $args = array(
+        'labels' => $labels,
+        'hierarchical' => true,
+    );
+    register_taxonomy( 'equipments_category', 'equipments', $args );
+}
+add_action( 'init', 'my_taxonomies_equipments', 0 );
+
 function my_custom_post_services() {
     $labels = array(
         'name'               => _x( 'Services', 'post type general name' ),
@@ -99,7 +121,10 @@ add_action( 'init', 'my_custom_post_news' );
 add_action( 'after_setup_theme', 'wpdocs_theme_setup' );
 function wpdocs_theme_setup() {
     add_image_size( 'banner-img', 1800 ); //sets the banner size
-    add_image_size( 'post-img', 700); // (cropped)
+    add_image_size( 'background-img', 1200 ); //sets the banner size
+    add_image_size( 'post-img', 700); //sets the post image size
+    add_image_size( 'gallery-large', 1200); //sets the large gallery images size
+    add_image_size( 'gallery-small', 625, 410, true); //sets the large gallery images size
 }
 
 function excerpt($limit) {
