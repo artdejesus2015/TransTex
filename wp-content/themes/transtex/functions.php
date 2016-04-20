@@ -12,6 +12,8 @@ function theme_enqueue_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 
+require_once( get_stylesheet_directory() . '/inc/wp_bootstrap_navwalker.php' );
+
 function my_custom_post_equipments() {
     $labels = array(
         'name'               => _x( 'Equipments', 'post type general name' ),

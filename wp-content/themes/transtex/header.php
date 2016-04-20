@@ -64,7 +64,9 @@
                 $defaults = array(
                     'theme_location'  => 'primary',
                     'menu'            => 'Main Menu',
-                    'menu_class'      => 'nav navbar-nav'
+                    'menu_class'      => 'nav navbar-nav',
+                    'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+                    'walker'            => new wp_bootstrap_navwalker()
                 );
                 wp_nav_menu( $defaults );
 
