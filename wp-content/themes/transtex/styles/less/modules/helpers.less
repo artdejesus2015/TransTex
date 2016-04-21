@@ -27,6 +27,13 @@
   margin-bottom: 50px;
   max-width: 1200px;
 
+  img {
+    -webkit-box-shadow: 5px 5px 20px #DCDCDC;
+    box-shadow: 5px 5px 20px #DCDCDC;
+    background-color: #fff;
+    padding: 15px;
+  }
+
   a {
     font-family: @RobotMedium;
     color: #c42841;
@@ -39,6 +46,59 @@
   .more-link {
     display: none;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: @MontserratBold;
+    color: #222222;
+    margin: 0 0 1em;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 33px;
+  }
+
+  h3 {
+    font-size: 30px;
+  }
+
+  h4 {
+    font-size: 27px;
+  }
+
+  h5 {
+    font-size: 24px;
+  }
+
+  h6 {
+    font-size: 21px;
+  }
+
+  ul {
+    margin-bottom: 30px;
+    padding-left: 30px;
+
+    li {
+      display: block;
+      font-family: @Roboto;
+      color: #333333;
+
+      &:before {
+        content: '';
+        height: 11px;
+        width: 11px;
+        background-color: #971b2f;
+        display: inline-block;
+        margin-right: 30px;
+        position: relative;
+        top: -1px;
+      }
+    }
+  }
+
 }
 
 .bg {

@@ -39,6 +39,7 @@
 .employee-wrap {
   .content-left {
     text-align: left;
+    overflow: hidden;
   }
 
   .employee-img {
@@ -337,15 +338,6 @@
 
 .tax-wrap {
   margin-bottom: 60px;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-  flex-flow: row wrap;
-  -webkit-justify-content: center;
-  justify-content: center;
 
   &:after {
     content: '';
@@ -355,7 +347,7 @@
 
   .tax-description {
     text-align: left;
-    padding: 30px 50px 30px 30px;
+    padding: 0 50px 30px 30px;
 
     .description {
       margin-bottom: 0;
@@ -365,6 +357,46 @@
   .tax-img {
     -webkit-box-shadow: 5px 5px 20px #DCDCDC;
     box-shadow: 5px 5px 20px #DCDCDC;
-    border: 15px solid #fff;
+    padding: 15px;
+    background-color: #fff;
+    margin-bottom: 2em;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.single-head {
+  text-align: left;
+
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  .secondary-title, .btn-primary {
+    display: inline-block;
+  }
+
+  .secondary-title {
+    float: left;
+  }
+
+  .btn-primary {
+    float: right;
+  }
+}
+
+.section-single-news {
+  .content {
+
+  }
+}
+
+.content-contact {
+  .content {
+    overflow: hidden;
   }
 }

@@ -12,7 +12,7 @@
 
 @media(min-width: 1824px) {
   .navbar-menu .menu-main-menu-container {
-    padding-left: 11%;
+    padding-left: 8%;
   }
 
   .navbar-menu .navbar-menu-collapse {
@@ -81,8 +81,7 @@
   }
 
   .navbar-menu .navbar-nav li a {
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding: 32px 12px;
   }
 
   .search-form-wrap .navbar-search-form {
@@ -91,10 +90,46 @@
   }
 }
 
+@media(max-width: 1499px) {
+  .employee-wrap {
+    .col-md-6 {
+      float: none;
+      width: 100%;
+      margin-bottom: 1em;
+      overflow: hidden;
+    }
+
+    .qoute-wrap .qoute {
+      position: absolute;
+      top: -60px;
+      left: 50%;
+      .translate(-50%, 0);
+    }
+
+    .content-left {
+      text-align: center;
+      margin-bottom: 2em;
+    }
+
+    .employee-img {
+      margin: 0 auto;
+    }
+
+    .qoute-wrap .description {
+      margin-bottom: 0;
+    }
+
+    .employee-description {
+      text-align: left;
+    }
+
+  }
+}
+
 @media(max-width: 1470px) {
   .navbar-menu .navbar-nav li a {
-    padding: 29px 10px;
-    font-size: 12px
+    padding: 28px 9px;
+    font-size: 12px;
   }
 
   .search-form-wrap .navbar-search-form .form-control {
@@ -103,17 +138,17 @@
 
   .search-form-wrap .contact-link {
     font-size: 18px;
-    padding-top: 23px;
-    padding-bottom: 23px;
+    padding-top: 22px;
+    padding-bottom: 22px;
   }
 
   .navbar-menu .navbar-brand {
-    width: 260px;
+    width: 245px;
   }
 
   .search-form-wrap .navbar-search-form {
-    padding-top: 22px;
-    padding-bottom: 22px;
+    padding-top: 21px;
+    padding-bottom: 21px;
   }
 }
 
@@ -171,6 +206,10 @@
     max-width: 340px;
     margin-bottom: 20px;
   }
+
+  .banner-sub .banner-caption {
+    top: 63%;
+  }
 }
 
 @media(max-width: 1199px) {
@@ -190,6 +229,27 @@
   .list-news .description p {
     font-size: 15px;
   }
+
+  .bg-fixed {
+    background-attachment: initial;
+  }
+
+  .team-list .list-description {
+    text-align: center;
+  }
+
+  .values-list li {
+    width: 400px;
+  }
+
+  .values-list .list-title {
+    margin-bottom: 1em;
+  }
+
+  .grid-box .grid-title {
+    text-align: left;
+  }
+
 }
 
 @media(max-width: 1024px) {
@@ -259,6 +319,27 @@
     text-align: center;
   }
 
+  .tax-wrap .tax-description {
+    text-align: center;
+    padding: 0;
+  }
+
+  .employee-wrap .employee-description {
+    text-align: center;
+  }
+
+  .employee-wrap .content-left {
+    margin-bottom: 0em;
+  }
+
+  .team-list li {
+    width: 340px;
+  }
+
+  .team-list .list-img {
+    height: 350px;
+  }
+
 }
 
 
@@ -302,13 +383,13 @@
 
         li {
           display: block;
-          text-align: center;
+          text-align: left;
 
           a {
             color: #fff;
             font-size: 15px;
             border-bottom: 1px solid #01546F;
-            padding: 15px 10px;
+            padding: 15px 20px;
 
             &:hover, &:focus {
               color: #D64D63;
@@ -353,11 +434,83 @@
   .post-type-archive-equipments .navbar-menu .navbar-nav .menu-item-25 a {
     color: #D64D63;
   }
+
+  .banner-sub .banner-caption {
+    top: 57%;
+  }
+
+  .navbar-menu .navbar-nav li.dropdown .dropdown-menu {
+    left: 0;
+    right: 0;
+    position: relative;
+    float: none;
+    text-align: center;
+  }
+
+  .navbar-menu .navbar-nav li.dropdown .dropdown-toggle .icon-angle-down {
+    position: absolute;
+    right: 0;
+    padding: 15px 20px;
+    background-color: #005D7D;
+  }
+
+  .navbar-menu .navbar-nav li.dropdown:hover > .dropdown-menu {
+    display: none;
+  }
+
 }
 
 @media(max-height: 850px) {
   .banner-home {
     height: 700px;
+  }
+}
+
+@media(max-width: 800px) {
+  .banner-home .banner-cap-right, .banner-home .banner-cap-left {
+    position: relative;
+    top: auto;
+    left: auto;
+    bottom: auto;
+    right: auto;
+    text-align: center;
+  }
+
+  .banner-home .banner-title {
+    max-width: none;
+
+    .red {
+      color: #C42841;
+    }
+  }
+
+  .banner-home .banner-title p {
+    display: block;
+    background-color: transparent;
+  }
+
+  .banner-home {
+    .banner_container {
+      position: absolute;
+      top: 50%;
+      .translate(0, -50%);
+      left: 0;
+      right: 0;
+      width: 80%;
+      height: auto;
+      max-width: none;
+      margin: 0 auto;
+    }
+  }
+
+  .banner-home .btn-primary {
+    float: none;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+
+  .banner-home .banner-cap-left .description:before {
+    display: none;
   }
 }
 
@@ -391,6 +544,20 @@
 @media(max-height: 650px) {
   .banner-home {
     height: 500px;
+
+    .banner-title {
+      font-size: 30px;
+      line-height: 0.8;
+    }
+
+    .btn-primary {
+      padding: 12px 25px;
+    }
+
+    .banner_container {
+      top: 58%;
+    }
+
   }
 }
 

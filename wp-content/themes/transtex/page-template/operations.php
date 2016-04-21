@@ -332,9 +332,11 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 
                                 ?>
 
-                                <div class="img-wrap img-full">
-                                    <img src="<?php echo $large_img_thumb;?>">
-                                </div>
+                                <?php if ($large_img_thumb): ?>
+                                    <div class="img-wrap img-full">
+                                        <img src="<?php echo $large_img_thumb;?>">
+                                    </div>
+                                <?php endif; ?>
 
                                 <div class="img-half-wrap">
 

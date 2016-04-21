@@ -52,7 +52,7 @@ $bg_img = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full',
                                             <div class="description">
                                                 <?php
                                                 $content = get_field('category_description', $term);
-                                                $trimmed_content = wp_trim_words( $content, 25, '...' );?>
+                                                $trimmed_content = wp_trim_words( $content, 20, '...' );?>
                                                 <p><?php echo $trimmed_content; ?></p>
                                             </div>
                                             <div class="btn btn-primary">Learn More</div>

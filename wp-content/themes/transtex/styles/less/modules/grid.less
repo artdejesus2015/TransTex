@@ -175,6 +175,7 @@
 
     a {
       display: block;
+      text-decoration: none !important;
     }
   }
 
@@ -295,6 +296,11 @@
 }
 
 .grid-news {
+
+  >a {
+    text-decoration: none !important;
+  }
+
   .grid-item {
     padding: 40px;
     .box-shadow(5px 5px 20px #DCDCDC);
@@ -336,6 +342,10 @@
 
       .description {
         margin-bottom: 30px;
+
+        p {
+          color: #333333;
+        }
       }
     }
 
@@ -384,5 +394,11 @@
       font-family: @RoboLight;
       color: #333333;
     }
+  }
+}
+
+.grid-tax {
+  .col-md-4 {
+    padding: 0 20px;
   }
 }

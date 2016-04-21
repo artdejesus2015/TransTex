@@ -22,7 +22,7 @@
 				"name": "cross"
 			},
 			"setIdx": 0,
-			"setId": 3,
+			"setId": 23,
 			"iconIdx": 0
 		},
 		{
@@ -30,9 +30,9 @@
 				"paths": [
 					"M340 548.571q0 7.429-5.714 13.143l-266.286 266.286q-5.714 5.714-13.143 5.714t-13.143-5.714l-28.571-28.571q-5.714-5.714-5.714-13.143t5.714-13.143l224.571-224.571-224.571-224.571q-5.714-5.714-5.714-13.143t5.714-13.143l28.571-28.571q5.714-5.714 13.143-5.714t13.143 5.714l266.286 266.286q5.714 5.714 5.714 13.143z"
 				],
+				"width": 347,
 				"attrs": [],
 				"isMulticolor": false,
-				"width": 347,
 				"tags": [
 					"angle-right"
 				],
@@ -47,7 +47,7 @@
 				"name": "angle-right"
 			},
 			"setIdx": 1,
-			"setId": 2,
+			"setId": 22,
 			"iconIdx": 0
 		},
 		{
@@ -66,14 +66,14 @@
 			"attrs": [],
 			"properties": {
 				"order": 1,
-				"id": 0,
+				"id": 1,
 				"prevSize": 28,
 				"code": 59654,
 				"name": "twitter"
 			},
-			"setIdx": 2,
-			"setId": 1,
-			"iconIdx": 0
+			"setIdx": 1,
+			"setId": 22,
+			"iconIdx": 1
 		},
 		{
 			"icon": {
@@ -92,14 +92,14 @@
 			"attrs": [],
 			"properties": {
 				"order": 2,
-				"id": 1,
+				"id": 2,
 				"prevSize": 28,
 				"code": 59655,
 				"name": "facebook"
 			},
-			"setIdx": 2,
-			"setId": 1,
-			"iconIdx": 1
+			"setIdx": 1,
+			"setId": 22,
+			"iconIdx": 2
 		},
 		{
 			"icon": {
@@ -117,13 +117,38 @@
 			"attrs": [],
 			"properties": {
 				"order": 5,
-				"id": 2,
+				"id": 3,
 				"prevSize": 28,
 				"code": 59648,
 				"name": "youtube"
 			},
-			"setIdx": 2,
-			"setId": 1,
+			"setIdx": 1,
+			"setId": 22,
+			"iconIdx": 3
+		},
+		{
+			"icon": {
+				"paths": [
+					"M614.286 420.571q0 7.429-5.714 13.143l-266.286 266.286q-5.714 5.714-13.143 5.714t-13.143-5.714l-266.286-266.286q-5.714-5.714-5.714-13.143t5.714-13.143l28.571-28.571q5.714-5.714 13.143-5.714t13.143 5.714l224.571 224.571 224.571-224.571q5.714-5.714 13.143-5.714t13.143 5.714l28.571 28.571q5.714 5.714 5.714 13.143z"
+				],
+				"width": 658,
+				"attrs": [],
+				"isMulticolor": false,
+				"tags": [
+					"angle-down"
+				],
+				"grid": 14
+			},
+			"attrs": [],
+			"properties": {
+				"order": 6,
+				"id": 2,
+				"prevSize": 28,
+				"code": 59651,
+				"name": "angle-down"
+			},
+			"setIdx": 3,
+			"setId": 20,
 			"iconIdx": 2
 		}
 	],

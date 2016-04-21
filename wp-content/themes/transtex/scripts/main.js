@@ -63,6 +63,15 @@
         $(".navbar-menu-collapse").removeClass("show");
     });
 
+    $('.grid-footer .grid-title').each(function() {
+        var word = $(this).html();
+        var index = word.indexOf(' ');
+        if(index == -1) {
+            index = word.length;
+        }
+        $(this).html('<span class="red">' + word.substring(0, index) + '</span>' + word.substring(index, word.length));
+    });
+
 
 
 })(window, document, jQuery);
