@@ -8506,6 +8506,18 @@ h6 {
   .team-list .list-img {
     height: 350px;
   }
+  .grid-equipment .grid-img {
+    height: 400px;
+    width: 100%;
+  }
+  .grid-news .grid-img {
+    height: 400px;
+    width: 100%;
+    margin-bottom: 2em;
+  }
+  .grid-news .grid-item .grid-desription {
+    padding-left: 0;
+  }
 }
 @media (max-width: 900px) {
   .top-head {
@@ -8660,6 +8672,10 @@ h6 {
   .list-news li .list-title {
     min-height: 100px;
   }
+  .section-single-news .single-description .secondary-title {
+    max-width: 450px;
+    font-size: 20px;
+  }
 }
 @media (max-height: 750px) {
   .banner-home {
@@ -8690,5 +8706,16 @@ h6 {
   }
   .list-news li .list-title {
     min-height: 0;
+  }
+}
+@media (max-width: 480px) {
+  body {
+    font-size: 15px;
+  }
+  .grid-news .grid-img {
+    height: 300px;
+  }
+  .grid-box .grid-caption .description p {
+    font-size: 15px;
   }
 }
