@@ -6895,12 +6895,13 @@ h6 {
 }
 .description ul {
   margin-bottom: 30px;
-  padding-left: 30px;
+  padding-left: 50px;
 }
 .description ul li {
   display: block;
   font-family: 'RobotoRegular', sanserif;
   color: #333333;
+  position: relative;
 }
 .description ul li:before {
   content: '';
@@ -6909,8 +6910,9 @@ h6 {
   background-color: #971b2f;
   display: inline-block;
   margin-right: 30px;
-  position: relative;
-  top: -1px;
+  position: absolute;
+  top: 10px;
+  left: -25px;
 }
 .bg {
   background-position: center center;
@@ -6951,6 +6953,9 @@ h6 {
 }
 .bg-fixed {
   background-attachment: fixed;
+}
+.oh {
+  overflow: hidden;
 }
 .btn {
   letter-spacing: 3px;
@@ -8311,20 +8316,8 @@ h6 {
   .search-form-wrap .navbar-search-form .form-control {
     width: 100px;
   }
-  .grid-box .grid-caption .caption-title {
-    font-size: 25px;
-  }
   .grid-box .grid-caption {
     padding: 10px 40px;
-  }
-  .grid-box .grid-caption .caption-title {
-    margin-bottom: 15px;
-  }
-  .grid-box .grid-caption .caption-title:before {
-    left: -620px;
-  }
-  .grid-box .grid-caption .caption-title:after {
-    right: -620px;
   }
   .grid-box .grid-item {
     height: 400px;
@@ -8412,16 +8405,23 @@ h6 {
   .grid-box .grid-title {
     padding: 15px;
   }
-  .grid-title {
-    font-size: 15px;
+  .grid-box .grid-caption .caption-title {
+    margin-bottom: 20px;
+    font-size: 25px;
+  }
+  .grid-box .grid-caption .description p {
+    font-size: 16px;
+  }
+  .grid-box .grid-caption .btn-primary {
+    padding: 15px 20px;
   }
 }
 @media (max-width: 1280px) {
-  .grid-box .grid-caption .caption-title {
-    font-size: 20px;
-  }
   .grid-box .grid-caption .description p {
     font-size: 17px;
+  }
+  .grid-box .grid-title {
+    letter-spacing: normal;
   }
 }
 @media (max-width: 1267px) {
@@ -8495,6 +8495,12 @@ h6 {
   .list-news li .list-title {
     min-height: 165px;
   }
+  .grid-box .grid-title {
+    font-size: 16px;
+  }
+  .banner-sub .banner-caption {
+    font-size: 60px;
+  }
 }
 @media (max-width: 991px) {
   .banner-home .banner-title {
@@ -8517,10 +8523,6 @@ h6 {
   .grid-box a .grid-item:before {
     opacity: 0.7;
     filter: alpha(opacity=70);
-  }
-  .grid-box .grid-caption .caption-title {
-    font-size: 30px;
-    margin-bottom: 30px;
   }
   .grid-box .grid-caption .description p {
     font-size: 20px;
@@ -8564,6 +8566,19 @@ h6 {
   }
   .grid-news .grid-item .grid-desription {
     padding-left: 0;
+  }
+  .single-head .secondary-title {
+    float: none;
+    margin-bottom: 1em;
+  }
+  .single-head .btn-primary {
+    float: none;
+    margin-bottom: 3em;
+  }
+}
+@media (max-height: 950px) {
+  .navbar-menu .navbar-menu-collapse.show {
+    overflow-y: scroll;
   }
 }
 @media (max-width: 900px) {
@@ -8767,10 +8782,6 @@ h6 {
   }
 }
 @media (max-width: 768px) {
-  .grid-box .grid-caption .caption-title {
-    font-size: 25px;
-    margin-bottom: 20px;
-  }
   .grid-box .grid-caption .description {
     margin-bottom: 30px;
   }
@@ -8780,6 +8791,23 @@ h6 {
   .section-single-news .single-description .secondary-title {
     max-width: 450px;
     font-size: 20px;
+  }
+  .banner-sub .banner-caption {
+    font-size: 40px;
+  }
+  .banner-sub {
+    height: 400px;
+  }
+  .gallery-wrap .img-half {
+    width: 100%;
+    float: none;
+    padding: 0;
+  }
+  .gallery-wrap .img-half-wrap .img-half:first-child {
+    padding: 0;
+  }
+  .gallery-wrap .img-half-wrap .img-half:last-child {
+    padding: 0;
   }
 }
 @media (max-height: 750px) {
@@ -8813,9 +8841,24 @@ h6 {
     min-height: 0;
   }
 }
+@media (max-height: 500px) {
+  .banner-home {
+    height: 400px;
+  }
+  .navbar-menu .navbar-menu-collapse .mobile-close {
+    font-size: 20px;
+  }
+  .navbar-menu .navbar-menu-collapse .navbar-nav li a {
+    font-size: 10px;
+    padding: 10px 20px;
+  }
+  .navbar-menu .navbar-nav li.dropdown .icon-angle-down {
+    padding: 10px 20px;
+  }
+}
 @media (max-width: 480px) {
   body {
-    font-size: 15px;
+    font-size: 13px;
   }
   .grid-news .grid-img {
     height: 300px;
@@ -8825,5 +8868,135 @@ h6 {
   }
   .slug-title {
     font-size: 30px;
+  }
+  .navbar-menu .navbar-brand {
+    width: 180px;
+    padding: 10px 5px;
+  }
+  .navbar-menu .navbar-toggle {
+    margin: 12px 15px 0;
+  }
+  .banner-home .banner-title {
+    font-size: 20px;
+    line-height: 0.5;
+  }
+  .banner-home .btn-primary {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 10px;
+    padding: 10px 20px;
+  }
+  .banner-home .banner-cap-left .description p,
+  .banner-home .banner-cap-left .description a {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .grid-box .grid-caption .caption-title {
+    font-size: 20px;
+  }
+  .grid-box .grid-caption .caption-title:before,
+  .grid-box .grid-caption .caption-title:after {
+    top: 15px;
+  }
+  .grid-box .grid-caption {
+    padding: 20px 30px;
+  }
+  .grid-box .grid-caption .caption-title:before {
+    left: -615px;
+  }
+  .grid-box .grid-caption .caption-title:after {
+    right: -615px;
+  }
+  .grid-box {
+    padding: 0 10px;
+  }
+  .section {
+    padding: 50px 0;
+  }
+  .logo-icon-img {
+    padding: 25px 0 40px;
+  }
+  .title {
+    letter-spacing: normal;
+  }
+  .list-news li {
+    width: 100%;
+  }
+  .list-news li .list-title {
+    font-size: 18px;
+  }
+  .list-news .description p {
+    font-size: 13px;
+  }
+  .btn-primary {
+    padding: 15px 20px;
+  }
+  .banner-sub .banner-caption {
+    font-size: 25px;
+  }
+  .banner-sub {
+    height: 250px;
+  }
+  .section-single-news .single-description .secondary-title {
+    font-size: 16px;
+  }
+  .single-head .btn-primary {
+    font-size: 8px;
+  }
+  .secondary-title {
+    font-size: 22px;
+  }
+  .description h1 {
+    font-size: 20px;
+  }
+  .description h2 {
+    font-size: 19px;
+  }
+  .description h3 {
+    font-size: 18px;
+  }
+  .description h4 {
+    font-size: 17px;
+  }
+  .description h5 {
+    font-size: 16px;
+  }
+  .description h6 {
+    font-size: 14px;
+  }
+  .description ul li:before {
+    top: 6px;
+  }
+  .team-list li {
+    width: 100%;
+  }
+  .team-list .list-img {
+    height: 480px;
+  }
+  .secondary-grid-title {
+    font-size: 25px;
+  }
+  .grid-equipment .grid-desription {
+    padding: 30px 15px 40px;
+  }
+  .grid-equipment .grid-img {
+    height: 300px;
+  }
+  .grid-services .btn-primary {
+    font-size: 8px;
+  }
+  .grid-services .grid-item {
+    padding: 30px 20px 40px;
+  }
+  .grid-news .grid-item {
+    padding: 15px;
+  }
+  .grid-news .secondary-grid-title {
+    font-size: 18px;
+  }
+}
+@media (max-width: 400px) {
+  .team-list .list-img {
+    height: 300px;
   }
 }

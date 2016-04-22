@@ -79,12 +79,13 @@
 
   ul {
     margin-bottom: 30px;
-    padding-left: 30px;
+    padding-left: 50px;
 
     li {
       display: block;
       font-family: @Roboto;
       color: #333333;
+      position: relative;
 
       &:before {
         content: '';
@@ -93,8 +94,9 @@
         background-color: #971b2f;
         display: inline-block;
         margin-right: 30px;
-        position: relative;
-        top: -1px;
+        position: absolute;
+        top: 10px;
+        left: -25px;
       }
     }
   }
@@ -146,4 +148,8 @@
 
 .bg-fixed {
   background-attachment: fixed;
+}
+
+.oh {
+  overflow: hidden;
 }

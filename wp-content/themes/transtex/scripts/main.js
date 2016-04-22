@@ -57,10 +57,12 @@
 
     $(".navbar-toggle").click(function(){
         $(".navbar-menu-collapse").addClass("show");
+        $("body").addClass("oh");
     });
 
     $(".mobile-close").click(function(){
         $(".navbar-menu-collapse").removeClass("show");
+        $("body").removeClass("oh");
     });
 
     $('.grid-footer .grid-title').each(function() {
