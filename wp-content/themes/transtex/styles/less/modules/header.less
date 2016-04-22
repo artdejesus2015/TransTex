@@ -80,14 +80,29 @@
       &.dropdown {
 
         .dropdown-toggle {
+          padding-right: 20px;
+        }
+
+        .icon-angle-down {
+          font-size: 22px;
+          vertical-align: middle;
+          padding-left: 5px;
+          position: absolute;
+          top: 38%;
+          right: -5px;
+          color: #333333;
+        }
+
+        &:hover, &:focus {
+          .dropdown-toggle {
+            color: #c42841;
+          }
           .icon-angle-down {
-            font-size: 22px;
-            vertical-align: middle;
-            padding-left: 5px;
-            position: relative;
-            top: -2px;
+            color: #c42841;
           }
         }
+
+
 
         .dropdown-menu {
           display: block;
@@ -124,7 +139,7 @@
               }
             }
 
-            &.active {
+            &.active, &.current-menu-ancestor,  &.current-menu-parent {
               a {
                 background-color: #f1f1f1 !important;
               }
@@ -165,6 +180,10 @@
             display: block;
           }
         }
+      }
+
+      &.current_page_parent .icon-angle-down , &.current_page_ancestor .icon-angle-down {
+        color: #c42841;
       }
     }
   }

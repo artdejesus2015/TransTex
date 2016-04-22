@@ -12,8 +12,10 @@ function theme_enqueue_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 
+// Navigation Menu Customization
 require_once( get_stylesheet_directory() . '/inc/wp_bootstrap_navwalker.php' );
 
+// Equipments Post Type
 function my_custom_post_equipments() {
     $labels = array(
         'name'               => _x( 'Equipments', 'post type general name' ),
@@ -64,6 +66,7 @@ function my_taxonomies_equipments() {
 }
 add_action( 'init', 'my_taxonomies_equipments', 0 );
 
+// Services Post Type
 function my_custom_post_services() {
     $labels = array(
         'name'               => _x( 'Services', 'post type general name' ),
@@ -92,6 +95,7 @@ function my_custom_post_services() {
 }
 add_action( 'init', 'my_custom_post_services' );
 
+// News Post Type
 function my_custom_post_news() {
     $labels = array(
         'name'               => _x( 'News', 'post type general name' ),
@@ -120,6 +124,7 @@ function my_custom_post_news() {
 }
 add_action( 'init', 'my_custom_post_news' );
 
+// Customized image sizes
 add_action( 'after_setup_theme', 'wpdocs_theme_setup' );
 function wpdocs_theme_setup() {
     add_image_size( 'banner-img', 1800 ); //sets the banner size
@@ -129,6 +134,7 @@ function wpdocs_theme_setup() {
     add_image_size( 'gallery-small', 625, 410, true); //sets the large gallery images size
 }
 
+// Limit the excerpt words
 function excerpt($limit) {
     $excerpt = explode(' ', get_the_excerpt(), $limit);
     if (count($excerpt)>=$limit) {
@@ -141,7 +147,7 @@ function excerpt($limit) {
     return $excerpt;
 }
 
-
+// Wordpress Admin Category Filter for Custom Post Types
 function taxonomy_filter_restrict_manage_posts() {
     global $typenow;
     $post_types = get_post_types( array( '_builtin' => false ) );
@@ -177,3 +183,4 @@ function taxonomy_filter_post_type_request( $query ) {
     }
 }
 add_filter( 'parse_query', 'taxonomy_filter_post_type_request' );
+

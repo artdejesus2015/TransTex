@@ -52,51 +52,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 
                            <div class="form-wrap">
                                <form>
-                                   <div class="row">
-                                       <div class="col-md-6">
-                                           <div class="form-group">
-                                               <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Name">
-                                           </div>
-                                       </div>
-                                       <div class="col-md-6">
-                                           <div class="form-group">
-                                               <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email Address">
-                                           </div>
-                                       </div>
-                                   </div>
-
-                                   <div class="row">
-                                       <div class="col-md-6">
-                                           <div class="form-group">
-                                               <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Phone Number">
-                                           </div>
-                                       </div>
-                                       <div class="col-md-6">
-                                           <div class="form-group">
-                                               <input type="file" name="file-7[]" id="file-7" class="inputfile inputfile-6" />
-                                               <label for="file-7" class="form-control file-form-control"><span class="label-upload">Upload Gas Analysis</span> <span class="label-black">Upload</span></label>
-                                           </div>
-                                       </div>
-                                   </div>
-
-                                   <div class="row">
-                                       <div class="col-md-12">
-                                           <select class="form-control">
-                                               <option>Subject: Gas Processing</option>
-                                               <option>Subject: Gas Processing</option>
-                                               <option>Subject: Gas Processing</option>
-                                           </select>
-
-                                       </div>
-                                   </div>
-
-                                   <div class="row">
-                                       <div class="col-md-12">
-                                           <textarea class="form-control" rows="10" placeholder="Message"></textarea>
-                                       </div>
-                                   </div>
-
-                                   <button type="submit" class="btn btn-primary">Submit</button>
+                                   <?php echo do_shortcode('[contact-form-7 id="127" title="Contact Form"]'); ?>
                                </form>
                            </div>
                        </div>

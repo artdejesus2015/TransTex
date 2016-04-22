@@ -1,24 +1,24 @@
 <?php
 get_header();
 
-$bg_img = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full', false, '' );
+$banner_img = get_field('banner_image_home', 'option');
+// thumbnail
+$size = 'banner-img';
+$banner_bg = $banner_img['sizes'][ $size ];
 ?>
 
-        <div class="banner bg-r-overlay banner-home" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/banner-home.jpg')">
+        <div class="banner bg-r-overlay banner-home" style="background-image: url('<?php echo $banner_bg; ?>')">
             <div class="banner_container">
                 <div class="banner-cap-right">
                     <div class="banner-title">
-                        <p><span class="white">Handling All Your</span></p>
-                        <p><span class="red">Gas Treating</span> <span class="white">&</span></p>
-                        <p><span class="red">Processing</span> <span class="white">Needs</span></p>
+                        <?php the_field('banner_title_home', 'option') ?>
                     </div>
-                    <a href="#" class="btn btn-primary btn-bordered-white">Contact Us</a>
+                    <a href="<?php the_field('banner_button_link_home', 'option') ?>" class="btn btn-primary btn-bordered-white"><?php the_field('banner_button_name_home', 'option') ?></a>
                 </div>
 
                 <div class="banner-cap-left">
                     <div class="description">
-                        <p>Discover how our experienced teams and
-                            modern equipment can give you the edge.</p>
+                        <?php the_field('banner_description_home', 'option') ?>
                     </div>
                 </div>
             </div>
@@ -91,7 +91,7 @@ $bg_img = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full',
 
                     <div class="bg-r-overlay video-wrap" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/video-img.jpg')">
                         <div class="play-button">
-                            <div class="tringle"></div>
+                            <div class="triangle"></div>
                         </div>
                     </div>
                 </div>
@@ -102,50 +102,41 @@ $bg_img = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full',
             <div class="container-fluid">
                 <div class="grid grid-box grid-intro-home2">
                     <div class="row">
-                        <div class="col-md-4">
-                            <a href="#">
-                                <div class="bg-r-overlay grid-item" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/grid-equipment1.jpg')">
-                                    <h3 class="title grid-title">amine plants</h3>
-                                    <div class="grid-caption">
-                                        <h3 class="title caption-title">amine plants</h3>
-                                        <div class="description">
-                                            <p>TransTex offers H2S Scavenger vessels to be used either in place of amine treating or in combination with amine treating. Scavengers offer producers and midstream  ...</p>
-                                        </div>
-                                        <div class="btn btn-primary">Learn More</div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
 
-                        <div class="col-md-4">
-                            <a href="#">
-                                <div class="bg-r-overlay grid-item" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/grid-equipment2.jpg')">
-                                    <h3 class="title grid-title">jt plants</h3>
-                                    <div class="grid-caption">
-                                        <h3 class="title caption-title">jt plants</h3>
-                                        <div class="description">
-                                            <p>TransTex offers H2S Scavenger vessels to be used either in place of amine treating or in combination with amine treating. Scavengers offer producers and midstream  ...</p>
-                                        </div>
-                                        <div class="btn btn-primary">Learn More</div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
 
-                        <div class="col-md-4">
-                            <a href="#">
-                                <div class="bg-r-overlay grid-item" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/grid-equipment3.jpg')">
-                                    <h3 class="title grid-title">h2s scavengers</h3>
-                                    <div class="grid-caption">
-                                        <h3 class="title caption-title">h2s scavengers</h3>
-                                        <div class="description">
-                                            <p>TransTex offers H2S Scavenger vessels to be used either in place of amine treating or in combination with amine treating. Scavengers offer producers and midstream  ...</p>
+                        <?php
+                        $args = array(
+                                        'post_type' => 'equipments',
+                                        'meta_key'		=> 'featured_equipment',
+                                        'meta_value'	=> '1',
+                                        'posts_per_page' => 3 );
+                        $loop = new WP_Query( $args );
+
+                        while ( $loop->have_posts() ) : $loop->the_post();
+                            $post_img = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'banner-img', false, '' );
+                            ?>
+
+                            <div class="col-md-4">
+                                <a href="<?php the_permalink(); ?>">
+                                    <div class="bg-r-overlay grid-item" style="background-image: url('<?php echo $post_img[0]; ?>')">
+                                        <h3 class="title grid-title"><?php the_title(); ?></h3>
+                                        <div class="grid-caption">
+                                            <h3 class="title caption-title"><?php the_title(); ?></h3>
+                                            <div class="description">
+                                                <?php
+                                                $content = get_the_content();
+                                                $trimmed_content = wp_trim_words( $content, 20, '...' );?>
+                                                <p><?php echo $trimmed_content; ?></p>
+                                            </div>
+                                            <div class="btn btn-primary">Learn More</div>
                                         </div>
-                                        <div class="btn btn-primary">Learn More</div>
                                     </div>
-                                </div>
-                            </a>
-                        </div>
+                                </a>
+                            </div>
+
+                        <?php endwhile; ?>
+
+
 
                     </div>
                 </div>

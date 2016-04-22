@@ -73,5 +73,12 @@
     });
 
 
+    $(".dropdown .icon-angle-down").click(function(){
+        $(this).next().slideToggle('slow');
+    });
+
+
+
+
 
 })(window, document, jQuery);
