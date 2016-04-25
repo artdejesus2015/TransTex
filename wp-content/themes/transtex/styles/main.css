@@ -8539,6 +8539,18 @@ h6 {
   .grid-box .grid-title {
     text-align: left;
   }
+  .map-wrap .operation-description .operation-title {
+    font-size: 13px;
+    letter-spacing: normal;
+  }
+  .map-wrap .operation-description .operation-location {
+    font-size: 13px;
+  }
+  .map-wrap .operation-description {
+    left: 30px;
+    padding: 20px 25px;
+    width: 150px;
+  }
 }
 @media (max-width: 1024px) {
   .grid .col-md-4 {
