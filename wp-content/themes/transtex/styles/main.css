@@ -8539,12 +8539,10 @@ h6 {
   .grid-box .grid-title {
     text-align: left;
   }
-  .map-wrap .operation-description .operation-title {
-    font-size: 13px;
-    letter-spacing: normal;
-  }
+  .map-wrap .operation-description .operation-title,
   .map-wrap .operation-description .operation-location {
     font-size: 13px;
+    letter-spacing: normal;
   }
   .map-wrap .operation-description {
     left: 30px;
@@ -9120,6 +9118,10 @@ h6 {
   .copyright-wrap ul {
     font-size: 13px;
     margin-right: 0;
+  }
+  .map-wrap .operation-description .operation-title,
+  .map-wrap .operation-description .operation-location {
+    font-size: 10px;
   }
 }
 @media (max-width: 400px) {
