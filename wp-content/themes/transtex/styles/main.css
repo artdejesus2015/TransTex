@@ -8893,6 +8893,38 @@ h6 {
   .gallery-wrap .img-half-wrap .img-half:last-child {
     padding: 0;
   }
+  .map-wrap .operation-wrap28 .operation-description,
+  .map-wrap .operation-wrap27 .operation-description,
+  .map-wrap .operation-wrap26 .operation-description,
+  .map-wrap .operation-wrap25 .operation-description,
+  .map-wrap .operation-wrap24 .operation-description,
+  .map-wrap .operation-wrap23 .operation-description,
+  .map-wrap .operation-wrap22 .operation-description,
+  .map-wrap .operation-wrap21 .operation-description {
+    left: auto;
+    right: 30px;
+  }
+  .map-wrap .operation-wrap28 .operation-description .triangle-left,
+  .map-wrap .operation-wrap27 .operation-description .triangle-left,
+  .map-wrap .operation-wrap26 .operation-description .triangle-left,
+  .map-wrap .operation-wrap25 .operation-description .triangle-left,
+  .map-wrap .operation-wrap24 .operation-description .triangle-left,
+  .map-wrap .operation-wrap23 .operation-description .triangle-left,
+  .map-wrap .operation-wrap22 .operation-description .triangle-left,
+  .map-wrap .operation-wrap21 .operation-description .triangle-left {
+    left: auto;
+    right: -10px;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #fff;
+    border-right: none;
+  }
+  .map-wrap .operation-circle {
+    height: 8px;
+    width: 8px;
+  }
 }
 @media (max-height: 750px) {
   .banner-home {
