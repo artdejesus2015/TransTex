@@ -51,9 +51,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                            <h2 class="title secondary-title">Get in Touch</h2>
 
                            <div class="form-wrap">
-                               <form>
-                                   <?php echo do_shortcode('[contact-form-7 id="127" title="Contact Form"]'); ?>
-                               </form>
+                               <?php echo do_shortcode('[contact-form-7 id="127" title="Contact Form"]'); ?>
                            </div>
                        </div>
                    </div>

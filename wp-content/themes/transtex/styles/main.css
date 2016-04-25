@@ -8575,6 +8575,9 @@ h6 {
     float: none;
     margin-bottom: 3em;
   }
+  .single-head {
+    text-align: center;
+  }
 }
 @media (max-height: 950px) {
   .navbar-menu .navbar-menu-collapse.show {
