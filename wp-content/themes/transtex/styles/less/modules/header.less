@@ -105,7 +105,6 @@
 
 
         .dropdown-menu {
-          display: block;
           padding-top: 20px;
           padding-bottom: 20px;
           top: 90%;
@@ -114,7 +113,10 @@
           left: -20%;
           -webkit-box-shadow:  0 0px 20px 0px rgba(0, 0, 0, 0.1);
           box-shadow: 0 0px 20px 0px rgba(0, 0, 0, 0.1);
-          display: none;
+          .transition(all ease-in-out .3s);
+          display: block;
+          .opacity(0);
+          visibility: hidden;
 
           &:before {
             content: '';
@@ -177,7 +179,8 @@
 
         &:hover {
           >.dropdown-menu {
-            display: block;
+            .opacity(1);
+            visibility: visible;;
           }
         }
       }

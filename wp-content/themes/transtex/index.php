@@ -7,16 +7,16 @@ $size = 'banner-img';
 $banner_bg = $banner_img['sizes'][ $size ];
 ?>
 
-        <div class="banner bg-r-overlay banner-home" style="background-image: url('<?php echo $banner_bg; ?>')">
+        <div class="banner bg-r-overlay banner-home animatedParent" style="background-image: url('<?php echo $banner_bg; ?>')">
             <div class="banner_container">
-                <div class="banner-cap-right">
+                <div class="banner-cap-right animated fadeInDownShort">
                     <div class="banner-title">
                         <?php the_field('banner_title_home', 'option') ?>
                     </div>
                     <a href="<?php the_field('banner_button_link_home', 'option') ?>" class="btn btn-primary btn-bordered-white"><?php the_field('banner_button_name_home', 'option') ?></a>
                 </div>
 
-                <div class="banner-cap-left">
+                <div class="banner-cap-left animated fadeInUpShort">
                     <div class="description">
                         <?php the_field('banner_description_home', 'option') ?>
                     </div>
@@ -24,9 +24,9 @@ $banner_bg = $banner_img['sizes'][ $size ];
             </div>
         </div>
 
-        <div class="section section-intro section-intro-home">
+        <div class="section section-intro section-intro-home animatedParent">
             <div class="container-fluid">
-                <div class="grid grid-box grid-intro-home">
+                <div class="grid grid-box grid-intro-home animated fadeInUpShort">
                     <div class="row">
 
                         <?php
@@ -68,28 +68,28 @@ $banner_bg = $banner_img['sizes'][ $size ];
                     </div>
                 </div>
                 
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-icon.png" class="logo-icon-img">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-icon.png" class="logo-icon-img animated fadeIn">
 
                 <div class="content">
                    <div class="container">
-                       <h2 class="title section-title after-line"><?php the_field('section_title_home_intro', 'option') ?></h2>
+                       <h2 class="title section-title after-line animated fadeInUpShort"><?php the_field('section_title_home_intro', 'option') ?></h2>
 
-                       <div class="description">
+                       <div class="description animated fadeInUpShort">
                            <?php the_field('section_description_home', 'option') ?>
                        </div>
 
-                       <a href="<?php the_field('section_button_link_home', 'option') ?>" class="btn btn-primary">Learn More</a>
+                       <a href="<?php the_field('section_button_link_home', 'option') ?>" class="btn btn-primary animated fadeInDownShort">Learn More</a>
                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="section bg-r-overlay bg-fixed section-we-do" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/bg-we-do.jpg')">
+        <div class="section bg-r-overlay bg-fixed section-we-do animatedParent" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/bg-we-do.jpg')">
             <div class="container">
                 <div class="content">
-                    <h2 class="title section-title title-white">watch how we do it</h2>
+                    <h2 class="title section-title title-white animated fadeInDownShort">watch how we do it</h2>
 
-                    <div class="bg-r-overlay video-wrap" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/video-img.jpg')">
+                    <div class="bg-r-overlay video-wrap animated fadeInUpShort" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/video-img.jpg')">
                         <div class="play-button">
                             <div class="triangle"></div>
                         </div>
@@ -98,9 +98,9 @@ $banner_bg = $banner_img['sizes'][ $size ];
             </div>
         </div>
 
-        <div class="section section-equipment section-equipment-home">
+        <div class="section section-equipment section-equipment-home animatedParent">
             <div class="container-fluid">
-                <div class="grid grid-box grid-intro-home2">
+                <div class="grid grid-box grid-intro-home2 animated fadeInUpShort">
                     <div class="row">
 
 
@@ -143,13 +143,13 @@ $banner_bg = $banner_img['sizes'][ $size ];
             </div>
         </div>
 
-        <div class="section section-news section-news-home">
+        <div class="section section-news section-news-home animatedParent">
             <div class="container">
                 <div class="content">
-                    <h2 class="title section-title">recent news</h2>
+                    <h2 class="title section-title animated fadeInDownShort">recent news</h2>
                 </div>
 
-                <ul class="list list-news">
+                <ul class="list list-news animated fadeInUpShort">
 
                     <?php
                     $args = array( 'post_type' => 'news', 'posts_per_page' => 3 );
@@ -182,15 +182,15 @@ $banner_bg = $banner_img['sizes'][ $size ];
             $section_bg_img = $section_bg['sizes'][ $size_bg ];
         ?>
 
-        <div class="section bg-r-overlay bg-fixed section-contact section-contact-home" style="background-image: url('<?php echo $section_bg_img;?>')">
+        <div class="section bg-r-overlay bg-fixed section-contact section-contact-home animatedParent" style="background-image: url('<?php echo $section_bg_img;?>')">
             <div class="container">
                 <div class="content">
-                    <h2 class="title slug-title"><?php the_field('contact_section_title', 'option') ?></h2>
+                    <h2 class="title slug-title animated fadeInDownShort"><?php the_field('contact_section_title', 'option') ?></h2>
 
-                    <div class="description">
+                    <div class="description animated fadeInDownShort">
                         <?php the_field('contact_section_description', 'option') ?>
                     </div>
-                    <a href="<?php the_field('contact_section_button_link', 'option') ?>" class="btn btn-primary">Contact Us</a>
+                    <a href="<?php the_field('contact_section_button_link', 'option') ?>" class="btn btn-primary animated fadeInUpShort">Contact Us</a>
                 </div>
             </div>
         </div>

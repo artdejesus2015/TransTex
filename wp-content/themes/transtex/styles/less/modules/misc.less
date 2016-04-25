@@ -288,12 +288,13 @@
 
   .operation-description {
     position: absolute;
-    left: 60px;
+    left: 50px;
     top: -80px;
     background-color: #fff;
-    padding: 35px 40px;
-    width: 355px;
-    .box-shadow(5px 5px 20px #DCDCDC);
+    padding: 30px 35px;
+    width: 250px;
+    -webkit-box-shadow: 5px 5px 20px #DCDCDC;
+    box-shadow: 5px 5px 20px #DCDCDC;
     display: none;
     z-index: 1;
 
@@ -320,8 +321,35 @@
       font-family: @RoboLight;
       font-size: 16px;
       color: #333333;
+
+
     }
 
+  }
+
+  @keyframes Glow {
+    from {
+      .box-shadow(0 0 0 5px rgba(150,27,46,0.1));
+    }
+    to {
+      .box-shadow(0 0 0 10px rgba(150,27,46,0.1));
+    }
+  }
+  @-moz-keyframes Glow {
+    from {
+      .box-shadow(0 0 0 5px rgba(150,27,46,0.1));
+    }
+    to {
+      .box-shadow(0 0 0 10px rgba(150,27,46,0.1));
+    }
+  }
+  @-webkit-keyframes Glow {
+    from {
+      .box-shadow(0 0 0 5px rgba(150,27,46,0.1));
+    }
+    to {
+      .box-shadow(0 0 0 10px rgba(150,27,46,0.1));
+    }
   }
 
   .operation-circle {
@@ -329,9 +357,25 @@
     width: 10px;
     border-radius: 15px;
     background-color: #961b2e;
-    .box-shadow(0 0 0 10px rgba(150,27,46,0.1));
+
     position: absolute;
+    -moz-animation-name: Glow;
+    -webkit-animation-name: Glow;
+    animation-name: Glow;
+    -moz-animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-direction: alternate; /* Chrome, Safari, Opera */
+    animation-direction: alternate;
   }
+
+
 }
 
 

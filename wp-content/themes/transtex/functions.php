@@ -4,9 +4,11 @@ function theme_enqueue_styles() {
 
     // Css Styles
     wp_enqueue_style( 'normalize',  get_stylesheet_directory_uri() . '/styles/normalize.min.css' );
+    wp_enqueue_style( 'animation',  get_stylesheet_directory_uri() . '/styles/plugin/animations.css' );
     wp_enqueue_style( 'main',  get_stylesheet_directory_uri() . '/styles/main.css' );
 
     // Js Scripts
+    wp_enqueue_script( 'animation',  get_stylesheet_directory_uri() . '/scripts/plugin/css3-animate-it.js' , array( 'jquery' ), '20140616', true);
     wp_enqueue_script( 'main',  get_stylesheet_directory_uri() . '/scripts/main.js' , array( 'jquery' ), '20140616', true);
 
 }

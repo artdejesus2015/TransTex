@@ -23,9 +23,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             <div class="operation-circle"></div>
             <div class="operation-description">
                 <div class="triangle-left"></div>
-                <p class="operation-title">jt plant</p>
-                <p class="operation-location">Operations & Maintenance
-                    Wheerler Country, TX</p>
+                <p class="operation-title">3 GPM Pneumatic Amine Unit</p>
+                <p class="operation-location">Maintenance <br/> Turnkey Installation <br/> Val Verde Country, TX</p>
             </div>
         </div>
 
@@ -33,9 +32,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             <div class="operation-circle"></div>
             <div class="operation-description">
                 <div class="triangle-left"></div>
-                <p class="operation-title">jt plant</p>
-                <p class="operation-location">Operations & Maintenance
-                    Wheerler Country, TX</p>
+                <p class="operation-title">10 GPM Pneumatic Amine Unit </p>
+                <p class="operation-location">Maintenance <br/> Turnkey Installation <br/> La Salle Country, TX</p>
             </div>
         </div>
 
@@ -43,9 +41,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             <div class="operation-circle"></div>
             <div class="operation-description">
                 <div class="triangle-left"></div>
-                <p class="operation-title">jt plant</p>
-                <p class="operation-location">Operations & Maintenance
-                    Wheerler Country, TX</p>
+                <p class="operation-title">7 GPM Amine Unit </p>
+                <p class="operation-location">Operations & Maintenance <br/> Turnkey Installation <br/> Zapata Country, TX</p>
             </div>
         </div>
 
@@ -53,9 +50,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             <div class="operation-circle"></div>
             <div class="operation-description">
                 <div class="triangle-left"></div>
-                <p class="operation-title">jt plant</p>
-                <p class="operation-location">Operations & Maintenance
-                    Wheerler Country, TX</p>
+                <p class="operation-title">60 GPM Amine Unit</p>
+                <p class="operation-location">Operations & Maintenance <br/> Turnkey Installation <br/> Tilden, TX</p>
             </div>
         </div>
 
@@ -63,9 +59,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             <div class="operation-circle"></div>
             <div class="operation-description">
                 <div class="triangle-left"></div>
-                <p class="operation-title">jt plant</p>
-                <p class="operation-location">Operations & Maintenance
-                    Wheerler Country, TX</p>
+                <p class="operation-title">70 GPM Amine Unit </p>
+                <p class="operation-location">Freer, TX</p>
             </div>
         </div>
 
@@ -73,9 +68,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             <div class="operation-circle"></div>
             <div class="operation-description">
                 <div class="triangle-left"></div>
-                <p class="operation-title">jt plant</p>
-                <p class="operation-location">Operations & Maintenance
-                    Wheerler Country, TX</p>
+                <p class="operation-title">60 GPM Amine Unit</p>
+                <p class="operation-location">Operations & Maintenance <br/> Turnkey Installation <br/> Live Oak Country, TX</p>
             </div>
         </div>
 
@@ -83,9 +77,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             <div class="operation-circle"></div>
             <div class="operation-description">
                 <div class="triangle-left"></div>
-                <p class="operation-title">jt plant</p>
-                <p class="operation-location">Operations & Maintenance
-                    Wheerler Country, TX</p>
+                <p class="operation-title">25 GPM Amine Unit</p>
+                <p class="operation-location">Operation & Maintenance <br/> Turnkey Installation <br/> Lavaca Country, TX</p>
             </div>
         </div>
 
@@ -93,9 +86,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             <div class="operation-circle"></div>
             <div class="operation-description">
                 <div class="triangle-left"></div>
-                <p class="operation-title">jt plant</p>
-                <p class="operation-location">Operations & Maintenance
-                    Wheerler Country, TX</p>
+                <p class="operation-title">10 GPM Amine Unit</p>
+                <p class="operation-location">Operations & Maintenance <br/> Turnkey Installation <br/> Kenedy, TX</p>
             </div>
         </div>
 
@@ -103,9 +95,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             <div class="operation-circle"></div>
             <div class="operation-description">
                 <div class="triangle-left"></div>
-                <p class="operation-title">jt plant</p>
-                <p class="operation-location">Operations & Maintenance
-                    Wheerler Country, TX</p>
+                <p class="operation-title">20 GPM Amine Plant <br/> 10 GPM Amine Plant</p>
+                <p class="operation-location">Operations & Maintenance <br/> Turnkey Installation <br/> Wilson Country, TX</p>
             </div>
         </div>
 
@@ -113,9 +104,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             <div class="operation-circle"></div>
             <div class="operation-description">
                 <div class="triangle-left"></div>
-                <p class="operation-title">jt plant</p>
-                <p class="operation-location">Operations & Maintenance
-                    Wheerler Country, TX</p>
+                <p class="operation-title">7 GPM Amine Unit</p>
+                <p class="operation-location">Operations & Maintenance <br/> Turnkey Installation <br/> Sheperd, TX</p>
             </div>
         </div>
 
@@ -123,9 +113,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             <div class="operation-circle"></div>
             <div class="operation-description">
                 <div class="triangle-left"></div>
-                <p class="operation-title">jt plant</p>
-                <p class="operation-location">Operations & Maintenance
-                    Wheerler Country, TX</p>
+                <p class="operation-title">5 GPM Amine Unit</p>
+                <p class="operation-location">Operations & Maintenance <br/> Turnkey Installation <br/> Cheapside, TX</p>
             </div>
         </div>
 
@@ -133,9 +122,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             <div class="operation-circle"></div>
             <div class="operation-description">
                 <div class="triangle-left"></div>
-                <p class="operation-title">jt plant</p>
-                <p class="operation-location">Operations & Maintenance
-                    Wheerler Country, TX</p>
+                <p class="operation-title">7 GPM Amine Unit</p>
+                <p class="operation-location">Operations & Maintenance <br/> Turnkey Installation <br/> Poth, TX</p>
             </div>
         </div>
 
@@ -143,9 +131,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             <div class="operation-circle"></div>
             <div class="operation-description">
                 <div class="triangle-left"></div>
-                <p class="operation-title">jt plant</p>
-                <p class="operation-location">Operations & Maintenance
-                    Wheerler Country, TX</p>
+                <p class="operation-title">3.5 GPM Amine Unit</p>
+                <p class="operation-location">Maintenance <br/> Halletsville, TX</p>
             </div>
         </div>
 
@@ -153,9 +140,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             <div class="operation-circle"></div>
             <div class="operation-description">
                 <div class="triangle-left"></div>
-                <p class="operation-title">jt plant</p>
-                <p class="operation-location">Operations & Maintenance
-                    Wheerler Country, TX</p>
+                <p class="operation-title">15 GPM Amine Unit</p>
+                <p class="operation-location">Maintenance <br/> Turnkey Installation <br/> Dinero, TX</p>
             </div>
         </div>
 
@@ -163,9 +149,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             <div class="operation-circle"></div>
             <div class="operation-description">
                 <div class="triangle-left"></div>
-                <p class="operation-title">jt plant</p>
-                <p class="operation-location">Operations & Maintenance
-                    Wheerler Country, TX</p>
+                <p class="operation-title">10 GPM Amine Unit</p>
+                <p class="operation-location">Austin Country, TX</p>
             </div>
         </div>
 
@@ -173,9 +158,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             <div class="operation-circle"></div>
             <div class="operation-description">
                 <div class="triangle-left"></div>
-                <p class="operation-title">jt plant</p>
-                <p class="operation-location">Operations & Maintenance
-                    Wheerler Country, TX</p>
+                <p class="operation-title">10 GPM Amine Unit</p>
+                <p class="operation-location">Operations & Maintenance <br/> Turnkey Installation <br/> Robertson Country, TX</p>
             </div>
         </div>
 
@@ -183,9 +167,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             <div class="operation-circle"></div>
             <div class="operation-description">
                 <div class="triangle-left"></div>
-                <p class="operation-title">jt plant</p>
-                <p class="operation-location">Operations & Maintenance
-                    Wheerler Country, TX</p>
+                <p class="operation-title">3 GPM Pneumatic Amine Unit</p>
+                <p class="operation-location">Maintenance <br/> Turnkey Installation <br/> Coldspring, TX</p>
             </div>
         </div>
 
@@ -193,9 +176,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             <div class="operation-circle"></div>
             <div class="operation-description">
                 <div class="triangle-left"></div>
-                <p class="operation-title">jt plant</p>
-                <p class="operation-location">Operations & Maintenance
-                    Wheerler Country, TX</p>
+                <p class="operation-title">10 GPM Pneumatic Amine Unit</p>
+                <p class="operation-location">Maintenance <br/> Turnkey Installation <br/> Galveston Country, TX</p>
             </div>
         </div>
 
@@ -203,9 +185,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             <div class="operation-circle"></div>
             <div class="operation-description">
                 <div class="triangle-left"></div>
-                <p class="operation-title">jt plant</p>
-                <p class="operation-location">Operations & Maintenance
-                    Wheerler Country, TX</p>
+                <p class="operation-title">40 GPM Amine Plants</p>
+                <p class="operation-location">Operations & Maintenance <br/> Turnkey Installation <br/> Hunstville, TX</p>
             </div>
         </div>
 
@@ -213,9 +194,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             <div class="operation-circle"></div>
             <div class="operation-description">
                 <div class="triangle-left"></div>
-                <p class="operation-title">jt plant</p>
-                <p class="operation-location">Operations & Maintenance
-                    Wheerler Country, TX</p>
+                <p class="operation-title">5 GPM Amine Unit</p>
+                <p class="operation-location">Maintenance <br/> Turnkey Installation <br/> Riverside, TX</p>
             </div>
         </div>
 
@@ -223,9 +203,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             <div class="operation-circle"></div>
             <div class="operation-description">
                 <div class="triangle-left"></div>
-                <p class="operation-title">jt plant</p>
-                <p class="operation-location">Operations & Maintenance
-                    Wheerler Country, TX</p>
+                <p class="operation-title">7.5 GPM Pneumatic Amine Unit</p>
+                <p class="operation-location">Maintenance <br/> Turnkey Installation <br/> Jefferson Country, TX</p>
             </div>
         </div>
 
@@ -233,9 +212,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             <div class="operation-circle"></div>
             <div class="operation-description">
                 <div class="triangle-left"></div>
-                <p class="operation-title">jt plant</p>
-                <p class="operation-location">Operations & Maintenance
-                    Wheerler Country, TX</p>
+                <p class="operation-title">10 GPM Pneumatic</p>
+                <p class="operation-location">Cameron Parish, LA</p>
             </div>
         </div>
 
@@ -243,9 +221,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             <div class="operation-circle"></div>
             <div class="operation-description">
                 <div class="triangle-left"></div>
-                <p class="operation-title">jt plant</p>
-                <p class="operation-location">Operations & Maintenance
-                    Wheerler Country, TX</p>
+                <p class="operation-title">40 GPM Amine Unit</p>
+                <p class="operation-location">Turnkey Installation <br/> McNarry, LA</p>
             </div>
         </div>
 
@@ -253,9 +230,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             <div class="operation-circle"></div>
             <div class="operation-description">
                 <div class="triangle-left"></div>
-                <p class="operation-title">jt plant</p>
-                <p class="operation-location">Operations & Maintenance
-                    Wheerler Country, TX</p>
+                <p class="operation-title">3 GPM Amine Unit</p>
+                <p class="operation-location">Crowley, LA</p>
             </div>
         </div>
 
@@ -263,9 +239,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             <div class="operation-circle"></div>
             <div class="operation-description">
                 <div class="triangle-left"></div>
-                <p class="operation-title">jt plant</p>
-                <p class="operation-location">Operations & Maintenance
-                    Wheerler Country, TX</p>
+                <p class="operation-title">12.5 GPM Amine Unit</p>
+                <p class="operation-location">Turnkey Installation <br/> Lake Arthur, LA</p>
             </div>
         </div>
 
@@ -273,9 +248,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             <div class="operation-circle"></div>
             <div class="operation-description">
                 <div class="triangle-left"></div>
-                <p class="operation-title">jt plant</p>
-                <p class="operation-location">Operations & Maintenance
-                    Wheerler Country, TX</p>
+                <p class="operation-title">3 GPM Amine Unit</p>
+                <p class="operation-location">Houma LA</p>
             </div>
         </div>
 
@@ -283,9 +257,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             <div class="operation-circle"></div>
             <div class="operation-description">
                 <div class="triangle-left"></div>
-                <p class="operation-title">jt plant</p>
-                <p class="operation-location">Operations & Maintenance
-                    Wheerler Country, TX</p>
+                <p class="operation-title">(2)10 MM JT <br>(1) 5 MM JT</p>
+                <p class="operation-location">Tyler Country, WV</p>
             </div>
         </div>
 
@@ -293,9 +266,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             <div class="operation-circle"></div>
             <div class="operation-description">
                 <div class="triangle-left"></div>
-                <p class="operation-title">jt plant</p>
-                <p class="operation-location">Operations & Maintenance
-                    Wheerler Country, TX</p>
+                <p class="operation-title">60 GPM Amine Unit</p>
+                <p class="operation-location">Operation & Amine Unit <br/> West Virginia</p>
             </div>
         </div>
 
@@ -304,8 +276,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             <div class="operation-description">
                 <div class="triangle-left"></div>
                 <p class="operation-title">jt plant</p>
-                <p class="operation-location">Operations & Maintenance
-                    Wheerler Country, TX</p>
+                <p class="operation-location">Operations & Maintenance <br/> Wheerler Country, TX</p>
             </div>
         </div>
 
