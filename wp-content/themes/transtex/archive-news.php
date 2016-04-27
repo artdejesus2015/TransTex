@@ -10,9 +10,9 @@ $size = 'banner-img';
 $banner_bg = $banner_img['sizes'][ $size ];
 ?>
 
-    <div class="banner bg-r-overlay bg-fixed banner-sub banner-news" style="background-image: url('<?php echo $banner_bg; ?>')">
+    <div class="banner bg-r-overlay bg-fixed banner-sub banner-news animatedParent" style="background-image: url('<?php echo $banner_bg; ?>')">
         <div class="banner_container">
-            <div class="banner-caption"><?php the_field('news_banner_title', 'option'); ?></div>
+            <div class="banner-caption animated fadeInDownShort"><?php the_field('news_banner_title', 'option'); ?></div>
         </div>
     </div>
 

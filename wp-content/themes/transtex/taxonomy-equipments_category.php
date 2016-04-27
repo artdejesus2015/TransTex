@@ -7,41 +7,41 @@ $size = 'banner-img';
 $banner_bg = $banner_img['sizes'][ $size ];
 ?>
 
-    <div class="banner bg-r-overlay bg-fixed banner-sub" style="background-image: url('<?php echo $banner_bg; ?>')">
+    <div class="banner bg-r-overlay bg-fixed banner-sub animatedParent" style="background-image: url('<?php echo $banner_bg; ?>')">
         <div class="banner_container">
-            <div class="banner-caption"><?php the_field('equipments_banner_title', 'option') ?></div>
+            <div class="banner-caption animated fadeInDownShort"><?php the_field('equipments_banner_title', 'option') ?></div>
         </div>
     </div>
 
     <div class="section section-sub section-tax-equip">
         <div class="container">
-            <div class="tax-wrap">
+            <div class="tax-wrap animatedParent">
                 <?php $term =	$wp_query->queried_object;
                 $category_image = get_field('category_image', $term);
                 // thumbnail
                 $category_size = 'post-img';
                 $category_img = $category_image['sizes'][ $category_size ]; ?>
 
-                <div class="bg col-md-5 col-md-push-7 tax-img">
+                <div class="bg col-md-5 col-md-push-7 tax-img animated fadeInUpShort">
                     <img src="<?php echo $category_img; ?>">
                 </div>
 
                 <div class="col-md-7 col-md-pull-5">
 
                     <div class="tax-description">
-                        <h3 class="grid-title secondary-grid-title"><?php echo $term->name; ?></h3>
+                        <h3 class="grid-title secondary-grid-title animated fadeInDownShort"><?php echo $term->name; ?></h3>
 
-                        <div class="description">
+                        <div class="description animated fadeInUpShort">
                             <?php the_field('category_description', $term) ?>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="tax-others">
-                <h2 class="title secondary-title">Natural <?php echo $term->name; ?> Solutions</h2>
+            <div class="tax-others animatedParent">
+                <h2 class="title secondary-title animated fadeInDownShort">Natural <?php echo $term->name; ?> Solutions</h2>
 
-                <div class="grid grid-box grid-tax">
+                <div class="grid grid-box grid-tax animated fadeInUpShort">
                     <div class="row">
 
                         <?php

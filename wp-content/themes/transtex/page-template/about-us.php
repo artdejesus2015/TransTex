@@ -8,30 +8,29 @@ $bg_img = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'banner
 if ( have_posts() ) : while ( have_posts() ) : the_post();
 ?>
 
-
-    <div class="banner bg-r-overlay bg-fixed banner-sub banner-about" style="background-image: url('<?php echo $bg_img[0]; ?>')">
+    <div class="banner bg-r-overlay bg-fixed banner-sub banner-about animatedParent" style="background-image: url('<?php echo $bg_img[0]; ?>')">
         <div class="banner_container">
-            <div class="banner-caption"><?php the_title(); ?></div>
+            <div class="banner-caption animated fadeInDownShort"><?php the_title(); ?></div>
         </div>
     </div>
 
-    <div class="section section-sub section-intro section-intro-sub">
+    <div class="section section-sub section-intro section-intro-sub animatedParent">
         <div class="container">
             <div class="content">
-                <h2 class="title secondary-title"><?php the_field('section_title'); ?></h2>
+                <h2 class="title secondary-title animated fadeInDownShort"><?php the_field('section_title'); ?></h2>
 
-                <div class="description">
+                <div class="description animated fadeInUpShort">
                     <?php the_content(); ?>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="section bg-r-overlay bg-fixed section-sub section-management" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/management-team-bg.jpg')">
+    <div class="section bg-r-overlay bg-fixed section-sub section-management animatedParent" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/management-team-bg.jpg')">
         <div class="container">
             <div class="content">
-                <h2 class="title secondary-title">Management Team</h2>
-                <ul class="list-inline team-list">
+                <h2 class="title secondary-title animated fadeInDownShort">Management Team</h2>
+                <ul class="list-inline team-list animated fadeInUpShort">
                     <li>
                         <a href="#">
                             <div class="list-item">
@@ -76,11 +75,11 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
         </div>
     </div>
 
-    <div class="section section-sub section-values">
+    <div class="section section-sub section-values animatedParent">
         <div class="container">
             <div class="content">
-                <h2 class="title secondary-title">Core Values</h2>
-                <ul class="list-inline values-list">
+                <h2 class="title secondary-title animated fadeInDownShort">Core Values</h2>
+                <ul class="list-inline values-list animated fadeInUpShort">
                     <li>
                         <div class="list-item">
                             <h3 class="title list-title">safety</h3>
@@ -137,14 +136,14 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
         </div>
     </div>
 
-    <div class="section bg-r-overlay bg-fixed section-sub section-employee" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/employee-bg.jpg')">
+    <div class="section bg-r-overlay bg-fixed section-sub section-employee animatedParent" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/employee-bg.jpg')">
         <div class="container">
             <div class="content">
-                <h2 class="title secondary-title title-white">Employee Spotlight</h2>
+                <h2 class="title secondary-title title-white animated fadeInDownShort">Employee Spotlight</h2>
                 <div class="employee-wrap">
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="content-left">
+                            <div class="content-left animated fadeInUpShort">
                                 <div class="col-md-4">
                                     <div class="bg employee-img" style="background-image: url('')"></div>
                                 </div>
@@ -160,7 +159,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                         </div>
 
                         <div class="col-md-6">
-                            <div class="qoute-wrap">
+                            <div class="qoute-wrap animated fadeInUpShort">
                                 <p class="qoute">“</p>
 
                                 <div class="description">

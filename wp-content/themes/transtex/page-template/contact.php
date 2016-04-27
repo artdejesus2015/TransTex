@@ -8,20 +8,20 @@ $bg_img = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'banner
 if ( have_posts() ) : while ( have_posts() ) : the_post();
 ?>
 
-    <div class="banner bg-r-overlay bg-fixed banner-sub banner-contact" style="background-image: url('<?php echo $bg_img[0]; ?>')">
+    <div class="banner bg-r-overlay bg-fixed banner-sub banner-contact animatedParent" style="background-image: url('<?php echo $bg_img[0]; ?>')">
         <div class="banner_container">
-            <div class="banner-caption"><?php the_title();?></div>
+            <div class="banner-caption animated fadeInDownShort"><?php the_title();?></div>
         </div>
     </div>
 
-    <div class="section section-sub section-sub-contact">
+    <div class="section section-sub section-sub-contact animatedParent">
         <div class="container">
            <div class="content-contact">
                <div class="row">
                    <div class="col-md-5">
-                       <div class="content text-left">
-                           <h2 class="title secondary-title">Visit Us</h2>
-                           <div class="list list-places">
+                       <div class="content text-left ">
+                           <h2 class="title secondary-title animated fadeInDownShort">Visit Us</h2>
+                           <div class="list list-places animated fadeInUpShort">
                                <div class="list-item">
                                    <h3 class="location-name">corporate headquarters</h3>
                                    <p class="location-address">1111 Louisiana Suite 4520, <br>
@@ -48,9 +48,9 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                    </div>
                    <div class="col-md-7">
                        <div class="content text-left">
-                           <h2 class="title secondary-title">Get in Touch</h2>
+                           <h2 class="title secondary-title animated fadeInDownShort">Get in Touch</h2>
 
-                           <div class="form-wrap">
+                           <div class="form-wrap animated fadeInUpShort">
                                <?php echo do_shortcode('[contact-form-7 id="127" title="Contact Form"]'); ?>
                            </div>
                        </div>

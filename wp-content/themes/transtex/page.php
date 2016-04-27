@@ -9,9 +9,9 @@ $bg_img = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full',
 if ( have_posts() ) : while ( have_posts() ) : the_post();
 ?>
 
-    <div class="banner bg-r-overlay banner-sub" style="background-image: url('<?php echo $bg_img[0]; ?>')">
+    <div class="banner bg-r-overlay banner-sub animatedParent" style="background-image: url('<?php echo $bg_img[0]; ?>')">
         <div class="banner_container">
-            <div class="banner-caption"><?php the_title(); ?></div>
+            <div class="banner-caption animated fadeInDownShort"><?php the_title(); ?></div>
         </div>
     </div>
 

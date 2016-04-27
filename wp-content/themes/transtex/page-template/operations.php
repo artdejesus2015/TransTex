@@ -9,14 +9,14 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 ?>
 
 
-    <div class="banner bg-r-overlay bg-fixed banner-sub banner-operations" style="background-image: url('<?php echo $bg_img[0]; ?>')">
+    <div class="banner bg-r-overlay bg-fixed banner-sub banner-operations animatedParent" style="background-image: url('<?php echo $bg_img[0]; ?>')">
         <div class="banner_container">
-            <div class="banner-caption"><?php the_title(); ?></div>
+            <div class="banner-caption animated fadeInDownShort"><?php the_title(); ?></div>
         </div>
     </div>
 
-<div class="section-map">
-    <div class="map-wrap">
+<div class="section-map animatedParent">
+    <div class="map-wrap animated fadeInUpShort">
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/map.png">
 
         <div class="operation-wrap operation-wrap1">
@@ -283,15 +283,15 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
     </div>
 </div>
 
-    <div class="section section-sub section-intro section-intro-sub">
+    <div class="section section-sub section-intro section-intro-sub animatedParent">
         <div class="container">
             <div class="content">
-                <h2 class="title secondary-title">How We Operate</h2>
-                <div class="description">
+                <h2 class="title secondary-title animated fadeInDownShort">How We Operate</h2>
+                <div class="description animated fadeIn">
                     <?php the_content(); ?>
                 </div>
 
-                <div class="gallery-wrap">
+                <div class="gallery-wrap animated fadeInUpShort">
                     <?php
                         if( have_rows('operation_gallery') ):
                             while( have_rows('operation_gallery') ): the_row();

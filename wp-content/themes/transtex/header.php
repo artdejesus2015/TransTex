@@ -1,8 +1,9 @@
 <!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" <?php language_attributes(); ?>> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" <?php language_attributes(); ?>> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" <?php language_attributes(); ?>> <![endif]-->
-<!--[if gt IE 8]><!--> <html <?php language_attributes(); ?> class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang=""> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -37,7 +38,6 @@
                             <button type="submit" class="btn btn-transparent"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/search-icon.png"></button>
                         </form>
                     </li>
-                    <li> <a href="#" class="contact-link">CALL: 713-654-4440 </a></li>
                 </ul>
             </div>
         </div>
@@ -82,8 +82,10 @@
                         </form>
                     </li>
                     <li> <a href="#" class="contact-link">CALL: 713-654-4440 </a></li>
-
                 </ul>
+
+                <button class="btn btn-search">Search <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/search-icon.png"></button>
+                <a href="" class="small-view-phone">Call <span class="icon-phone"></span></a>
 
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->

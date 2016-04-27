@@ -65,6 +65,10 @@ function isIE() {
         $(this).next().slideToggle('slow');
     });
 
+    $(".btn-search").click(function(){
+        $(".top-head").slideToggle('slow');
+    });
+
 
 
 })(window, document, jQuery);
@@ -74,30 +78,34 @@ function isIE() {
  Available for use under the MIT License
  */
 
-;( function ( document, window, index )
-{
-    var inputs = document.querySelectorAll( '.inputfile' );
-    Array.prototype.forEach.call( inputs, function( input )
-    {
-        var label	 = input.nextElementSibling,
-            labelVal = label.innerHTML;
+'use strict';
 
-        input.addEventListener( 'change', function( e )
+;( function( $, window, document, undefined )
+{
+    $( '.inputfile' ).each( function()
+    {
+        var $input	 = $( this ),
+            $label	 = $input.parent().next( 'label' ),
+            labelVal = $label.html();
+
+        $input.on( 'change', function( e )
         {
             var fileName = '';
+
             if( this.files && this.files.length > 1 )
                 fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
-            else
+            else if( e.target.value )
                 fileName = e.target.value.split( '\\' ).pop();
 
             if( fileName )
-                label.querySelector( 'span.label-upload' ).innerHTML = fileName;
+                $label.find( 'span.label-upload' ).html( fileName );
             else
-                label.innerHTML = labelVal;
+                $label.html( labelVal );
         });
 
         // Firefox bug fix
-        input.addEventListener( 'focus', function(){ input.classList.add( 'has-focus' ); });
-        input.addEventListener( 'blur', function(){ input.classList.remove( 'has-focus' ); });
+        $input
+            .on( 'focus', function(){ $input.addClass( 'has-focus' ); })
+            .on( 'blur', function(){ $input.removeClass( 'has-focus' ); });
     });
-}( document, window, 0 ));
+})( jQuery, window, document );
