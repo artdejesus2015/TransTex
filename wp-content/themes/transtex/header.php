@@ -81,11 +81,11 @@
                             <button type="submit" class="btn btn-transparent"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/search-icon.png"></button>
                         </form>
                     </li>
-                    <li> <a href="#" class="contact-link">CALL: 713-654-4440 </a></li>
+                    <li> <a href="tel:713-654-4440" class="contact-link">CALL: 713-654-4440 </a></li>
                 </ul>
 
                 <button class="btn btn-search">Search <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/search-icon.png"></button>
-                <a href="" class="small-view-phone">Call <span class="icon-phone"></span></a>
+                <a href="tel:713-654-4440" class="small-view-phone">Call <span class="icon-phone"></span></a>
 
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
